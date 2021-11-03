@@ -1,0 +1,15 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/model-bsi
+model-bsi.so
+model-bsi.dylib
+model-bsi.dll
+model-bsi.a
+model-bsi.lib
+model-bsi-test-*
+*.exe
+*.o
+*.obj
+*.lst

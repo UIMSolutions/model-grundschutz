@@ -1,0 +1,9 @@
+{
+	"authors": [
+		"oz"
+	],
+	"copyright": "Copyright © 2021, oz",
+	"description": "A minimal D application.",
+	"license": "proprietary",
+	"name": "model-bsi"
+}
