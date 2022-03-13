@@ -9,8 +9,13 @@ static this() {
 }
 // 
 class DBSINetwork : DOOPEntity {
-  this() { super();
-    this.attributes([
+  mixin(OOPEntityThis!("OPTRetailCDXDataStoreChannel"));
+  
+  override void initialize() {
+    super.initialize;
+
+    this
+      .addAttributes([
       "projectId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the project with which this entity is associated."}}`,
       "categoryId":`{"datatype":"UUID", "descriptions":{"en":""}}`,
 /*       "annotationId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the note."}}`,
