@@ -1,9 +1,42 @@
 {
-	"authors": [
-		"oz"
+	"authors": ["UI Manufaktur UG"],
+	"copyright": "Copyright © 2017 - 2020, UI Manufaktur UG",
+	"description": "Model for BSI applications",
+	"license": "MIT",
+	"name": "model-cms",
+"dependencies": {
+	"colored": "~>0.0.23",
+	"vibe-d": "~>0.9.4"
+},
+	"sourcePaths": [
+			"../../LIBS/uim-core",
+			"../../LIBS/uim-oop",
+			"../../LIBS/uim-models",
+			"../../LIBS/uim-jsonbase",
+			"../../LIBS/uim-entities",
+			"../../LIBS/uim-entitybase",
+
+			"../../MODELS/model-system",
+			"./"
 	],
-	"copyright": "Copyright © 2021, oz",
-	"description": "A minimal D application.",
-	"license": "proprietary",
-	"name": "model-bsi"
+	"importPaths": [
+			"../../LIBS/uim-core",
+			"../../LIBS/uim-oop",
+			"../../LIBS/uim-models",
+			"../../LIBS/uim-jsonbase",
+			"../../LIBS/uim-entities",
+			"../../LIBS/uim-entitybase",
+
+			"../../MODELS/model-system",
+			"./"
+	],
+"configurations": [
+	{
+		"name": "offline"
+	},
+	{
+		"name": "model_bsi",
+		"versions": ["model_bsi"]
+	}
+]
 }
