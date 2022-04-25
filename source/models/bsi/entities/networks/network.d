@@ -9,7 +9,7 @@ static this() {
 }
 // 
 class DBSINetwork : DOOPEntity {
-  mixin(OOPEntityThis!("OPTRetailCDXDataStoreChannel"));
+  mixin(EntityThis!("OPTRetailCDXDataStoreChannel"));
   
   override void initialize() {
     super.initialize;

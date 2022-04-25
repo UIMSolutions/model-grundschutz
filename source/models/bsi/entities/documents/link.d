@@ -9,7 +9,7 @@ static this() {
 }
 // 
 class DBSIDocumentLink : DOOPEntity {
-  mixin(OOPEntityThis!("BSIDocumentLink"));
+  mixin(EntityThis!("BSIDocumentLink"));
   
   override void initialize() {
     super.initialize;
@@ -44,7 +44,7 @@ class DBSIDocumentLink : DOOPEntity {
       .registerPath("bsi_documentlink");
   }
 }
-mixin(OOPEntityCalls!("BSIDocumentLink"));
+mixin(EntityCalls!("BSIDocumentLink"));
 
 unittest {
   version(uim_entities) {

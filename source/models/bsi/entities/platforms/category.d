@@ -9,7 +9,7 @@ static this() {
 }
 // 
 class DBSIPlatformCategory : DOOPEntity {
-  mixin(OOPEntityThis!("OPTRetailChannelCategoryAttribute"));
+  mixin(EntityThis!("OPTRetailChannelCategoryAttribute"));
   
   override void initialize() {
     super.initialize;
@@ -44,7 +44,7 @@ class DBSIPlatformCategory : DOOPEntity {
       .registerPath("bsi_platformcategories");
   }
 }
-mixin(OOPEntityCalls!("BSIPlatformCategory"));
+mixin(EntityCalls!("BSIPlatformCategory"));
 
 unittest {
   version(uim_entities) {

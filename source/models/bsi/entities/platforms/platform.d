@@ -9,7 +9,7 @@ static this() {
 }
 // 
 class DBSIPlatform : DOOPEntity {
-  mixin(OOPEntityThis!("BSIPlatform"));
+  mixin(EntityThis!("BSIPlatform"));
   
   override void initialize() {
     super.initialize;
@@ -44,7 +44,7 @@ class DBSIPlatform : DOOPEntity {
       .registerPath("bsi_platforms");
   }
 }
-mixin(OOPEntityCalls!("BSIPlatform"));
+mixin(EntityCalls!("BSIPlatform"));
 
 unittest {
   version(uim_entities) {

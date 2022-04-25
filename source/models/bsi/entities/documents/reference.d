@@ -9,7 +9,7 @@ static this() {
 }
 // 
 class DBSIDocumentReference : DOOPEntity {
-  mixin(OOPEntityThis!("BSIDocumentReference"));
+  mixin(EntityThis!("BSIDocumentReference"));
   
   override void initialize() {
     super.initialize;
@@ -44,7 +44,7 @@ class DBSIDocumentReference : DOOPEntity {
       .registerPath("bsi_documentreference");
   }
 }
-mixin(OOPEntityCalls!("BSIDocumentReference"));
+mixin(EntityCalls!("BSIDocumentReference"));
 
 unittest {
   version(uim_entities) {

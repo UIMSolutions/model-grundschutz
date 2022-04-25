@@ -9,7 +9,7 @@ static this() {
 }
 // 
 class DBSIRoomCategory : DOOPEntity {
-  mixin(OOPEntityThis!("BSIRoomCategory"));
+  mixin(EntityThis!("BSIRoomCategory"));
   
   override void initialize() {
     super.initialize;
@@ -44,7 +44,7 @@ class DBSIRoomCategory : DOOPEntity {
       .registerPath("bsi_roomcategories");
   }
 }
-mixin(OOPEntityCalls!("BSIRoomCategory"));
+mixin(EntityCalls!("BSIRoomCategory"));
 
 unittest {
   version(uim_entities) {

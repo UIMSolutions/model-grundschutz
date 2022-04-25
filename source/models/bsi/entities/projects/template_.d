@@ -9,7 +9,7 @@ static this() {
 }
 // 
 class DBSIProjectTemplate : DOOPEntity {
-  mixin(OOPEntityThis!("BSIProjectTemplate"));
+  mixin(EntityThis!("BSIProjectTemplate"));
   
   override void initialize() {
     super.initialize;
@@ -44,7 +44,7 @@ class DBSIProjectTemplate : DOOPEntity {
       .registerPath("bsi_projecttemplates");
   }
 }
-mixin(OOPEntityCalls!("BSIProjectTemplate"));
+mixin(EntityCalls!("BSIProjectTemplate"));
 
 unittest {
   version(uim_entities) {

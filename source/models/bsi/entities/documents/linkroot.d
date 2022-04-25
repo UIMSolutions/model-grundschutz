@@ -8,7 +8,7 @@ static this() {
   createEntities["bsiDocumentLinkRoot"] = (Json json) => BSIDocumentLinkRoot(json); 
 }
 // 
-  class DBSIDocumentLinkRoot : DOOPEntity {
+class DBSIDocumentLinkRoot : DOOPEntity {
   this() { super();
     this.attributes([
       "projectId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the project with which this entity is associated."}}`,
