@@ -15,7 +15,7 @@ class DBSIRoom : DOOPEntity {
     super.initialize;
 
     this
-      .addAttributes([
+      .addValues([
         "projectId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the project with which this entity is associated."}}`,
         "categoryId":`{"datatype":"UUID", "descriptions":{"en":""}}`,
   /*       "annotationId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the note."}}`,

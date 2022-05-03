@@ -15,7 +15,7 @@ class DBSISystem : DOOPEntity {
     super.initialize;
 
     this
-      .addAttributes([
+      .addValues([
 				"projectId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the project with which this entity is associated."}}`,
 				"platformId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the platform with which this entity is associated."}}`,
 				"confidentialityCode":`{"datatype":"String", "descriptions":{"en":""}}`,

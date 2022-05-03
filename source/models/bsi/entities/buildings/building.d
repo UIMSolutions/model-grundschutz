@@ -10,7 +10,7 @@ static this() {
 // 
   class DBSIBuilding : DOOPEntity {
   this() { super();
-    this.attributes([
+    this.addValues([
       "projectId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the project with which this entity is associated."}}`,
       "categoryId":`{"datatype":"UUID", "descriptions":{"en":""}}`,
 /*       "annotationId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the note."}}`,

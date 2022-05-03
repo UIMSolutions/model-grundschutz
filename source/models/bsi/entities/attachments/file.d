@@ -9,7 +9,7 @@ static this() {
 }// 
 class DBSIAttachmentFile : DOOPEntity {
   this() { super();
-    this.attributes([
+    this.addValues([
       "projectId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the project with which this entity is associated."}}`,
 /*       "annotationId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the note."}}`,
       "objectTypeCode":`{"datatype":"Integer", "descriptions":{"en":"Type of entity with which the note is associated."}}`,
