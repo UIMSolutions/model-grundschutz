@@ -13,3 +13,4 @@ model-bsi-test-*
 *.o
 *.obj
 *.lst
+model-cms-test-offline

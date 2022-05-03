@@ -46,8 +46,9 @@ class DBSIPlatformCategory : DOOPEntity {
 }
 mixin(EntityCalls!("BSIPlatformCategory"));
 
-unittest {
-  version(uim_entities) {
+version(test_library) {
+  unittest {
+    assert(APLFeedback);
     assert(BSIPlatformCategory);
   
   auto entity = BSIPlatformCategory;

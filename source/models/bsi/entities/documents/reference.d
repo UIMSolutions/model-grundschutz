@@ -46,8 +46,9 @@ class DBSIDocumentReference : DOOPEntity {
 }
 mixin(EntityCalls!("BSIDocumentReference"));
 
-unittest {
-  version(uim_entities) {
+version(test_library) {
+  unittest {
+    assert(APLFeedback);
     assert(BSIDocumentReference);
   
   auto entity = BSIDocumentReference;

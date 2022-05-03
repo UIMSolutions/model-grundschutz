@@ -61,8 +61,9 @@ static this() {
 auto BSIApplication() { return new DBSIApplication; } 
 auto BSIApplication(Json json) { return new DBSIApplication(json); } 
 
-unittest {
-  version(uim_entities) {
+version(test_library) {
+  unittest {
+    assert(APLFeedback);
     assert(BSIApplication);
   
   auto entity = BSIApplication;

@@ -46,8 +46,9 @@ class DBSIClient : DOOPEntity {
 }
 mixin(EntityCalls!("BSIClient"));
 
-unittest {
-  version(uim_entities) {
+version(test_library) {
+  unittest {
+    assert(APLFeedback);
     assert(BSIClient);
   
   auto entity = BSIClient;

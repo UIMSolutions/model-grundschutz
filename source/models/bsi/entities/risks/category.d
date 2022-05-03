@@ -46,8 +46,9 @@ class DBSIRiskCategory : DOOPEntity {
 }
 mixin(EntityCalls!("BSIRiskCategory"));
 
-unittest {
-  version(uim_entities) {
+version(test_library) {
+  unittest {
+    assert(APLFeedback);
     assert(BSIRiskCategory);
   
   auto entity = BSIRiskCategory;

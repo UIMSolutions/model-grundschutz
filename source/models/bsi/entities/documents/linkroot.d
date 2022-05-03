@@ -53,8 +53,9 @@ class DBSIDocumentLinkRoot : DOOPEntity {
 auto BSIDocumentLinkRoot() { return new DBSIDocumentLinkRoot; } 
 auto BSIDocumentLinkRoot(Json json) { return new DBSIDocumentLinkRoot(json); } 
 
-unittest {
-  version(uim_entities) {
+version(test_library) {
+  unittest {
+    assert(APLFeedback);
     assert(BSIDocumentLinkRoot);
   
   auto entity = BSIDocumentLinkRoot;

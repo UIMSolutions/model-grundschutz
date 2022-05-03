@@ -46,8 +46,9 @@ class DBSINetworkCategory : DOOPEntity {
 }
 mixin(EntityCalls!("BSINetworkCategory"));
 
-unittest {
-  version(uim_entities) {
+version(test_library) {
+  unittest {
+    assert(APLFeedback);
     assert(BSINetworkCategory);
   
   auto entity = BSINetworkCategory;

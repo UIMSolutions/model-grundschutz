@@ -53,8 +53,9 @@ class DBSIBuildingCategory : DOOPEntity {
 auto BSIBuildingCategory() { return new DBSIBuildingCategory; } 
 auto BSIBuildingCategory(Json json) { return new DBSIBuildingCategory(json); } 
 
-unittest {
-  version(uim_entities) {
+version(test_library) {
+  unittest {
+    assert(APLFeedback);
     assert(BSIBuildingCategory);
   
   auto entity = BSIBuildingCategory;

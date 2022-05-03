@@ -52,8 +52,9 @@ class DBSIAttachmentFile : DOOPEntity {
 auto BSIAttachmentFile() { return new DBSIAttachmentFile; } 
 auto BSIAttachmentFile(Json json) { return new DBSIAttachmentFile(json); } 
 
-unittest {
-  version(uim_entities) {
+version(test_library) {
+  unittest {
+    assert(APLFeedback);
     assert(BSIAttachmentFile);
   
   auto entity = BSIAttachmentFile;

@@ -47,8 +47,9 @@ class DBSIPersonCategory : DOOPEntity {
 }
 mixin(EntityCalls!("BSIPersonCategory"));
 
-unittest {
-  version(uim_entities) {
+version(test_library) {
+  unittest {
+    assert(APLFeedback);
     assert(BSIPersonCategory);
   
   auto entity = BSIPersonCategory;

@@ -46,8 +46,9 @@ class DBSIProcessCategory : DOOPEntity {
 }
 mixin(EntityCalls!("BSIProcessCategory"));
 
-unittest {
-  version(uim_entities) {
+version(test_library) {
+  unittest {
+    assert(APLFeedback);
     assert(BSIProcessCategory);
   
   auto entity = BSIProcessCategory;

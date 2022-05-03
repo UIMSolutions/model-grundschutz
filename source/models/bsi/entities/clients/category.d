@@ -53,8 +53,9 @@ class DBSIClientCategory : DOOPEntity {
 auto BSIClientCategory() { return new DBSIClientCategory; } 
 auto BSIClientCategory(Json json) { return new DBSIClientCategory(json); } 
 
-unittest {
-  version(uim_entities) {
+version(test_library) {
+  unittest {
+    assert(APLFeedback);
     assert(BSIClientCategory);
   
   auto entity = BSIClientCategory;

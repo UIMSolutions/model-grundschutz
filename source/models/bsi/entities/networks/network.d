@@ -59,8 +59,9 @@ class DBSINetwork : DOOPEntity {
 auto BSINetwork() { return new DBSINetwork; } 
 auto BSINetwork(Json json) { return new DBSINetwork(json); } 
 
-unittest {
-  version(uim_entities) {
+version(test_library) {
+  unittest {
+    assert(APLFeedback);
     assert(BSINetwork);
   
   auto entity = BSINetwork;

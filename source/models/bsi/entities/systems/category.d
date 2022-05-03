@@ -46,8 +46,9 @@ class DBSISystemCategory : DOOPEntity {
 }
 mixin(EntityCalls!("BSISystemCategory"));
 
-unittest {
-  version(uim_entities) {
+version(test_library) {
+  unittest {
+    assert(APLFeedback);
     assert(BSISystemCategory);
   
   auto entity = BSISystemCategory;

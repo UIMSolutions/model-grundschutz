@@ -54,8 +54,9 @@ static this() {
 auto BSIBuilding() { return new DBSIBuilding; } 
 auto BSIBuilding(Json json) { return new DBSIBuilding(json); } 
 
-unittest {
-  version(uim_entities) {
+version(test_library) {
+  unittest {
+    assert(APLFeedback);
     assert(BSIBuilding);
   
   auto entity = BSIBuilding;

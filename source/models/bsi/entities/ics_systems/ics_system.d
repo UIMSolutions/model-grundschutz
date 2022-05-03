@@ -53,8 +53,9 @@ class DBSIICSSystem : DOOPEntity {
 }
 mixin(EntityCalls!("BSIICSSystem"));
 
-unittest {
-  version(uim_entities) {
+version(test_library) {
+  unittest {
+    assert(APLFeedback);
     assert(BSIICSSystem);
   
   auto entity = BSIICSSystem;

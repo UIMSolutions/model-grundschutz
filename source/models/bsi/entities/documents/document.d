@@ -46,8 +46,9 @@ class DBSIDocument : DOOPEntity {
 }
 mixin(EntityCalls!("BSIDocument"));
 
-unittest {
-  version(uim_entities) {
+version(test_library) {
+  unittest {
+    assert(APLFeedback);
     assert(BSIDocument);
   
   auto entity = BSIDocument;

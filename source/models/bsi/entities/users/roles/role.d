@@ -46,8 +46,9 @@ class DBSIRole : DOOPEntity {
 }
 mixin(EntityCalls!("BSIRole"));
 
-unittest {
-  version(uim_entities) {
+version(test_library) {
+  unittest {
+    assert(APLFeedback);
     assert(BSIRole);
   
   auto entity = BSIRole;

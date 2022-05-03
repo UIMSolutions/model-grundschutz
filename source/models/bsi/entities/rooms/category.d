@@ -46,8 +46,9 @@ class DBSIRoomCategory : DOOPEntity {
 }
 mixin(EntityCalls!("BSIRoomCategory"));
 
-unittest {
-  version(uim_entities) {
+version(test_library) {
+  unittest {
+    assert(APLFeedback);
     assert(BSIRoomCategory);
   
   auto entity = BSIRoomCategory;

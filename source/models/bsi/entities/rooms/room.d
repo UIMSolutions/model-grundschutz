@@ -47,8 +47,9 @@ class DBSIRoom : DOOPEntity {
 }
 mixin(EntityCalls!("BSIRoom"));
 
-unittest {
-  version(uim_entities) {
+version(test_library) {
+  unittest {
+    assert(APLFeedback);
     assert(BSIRoom);
   
   auto entity = BSIRoom;

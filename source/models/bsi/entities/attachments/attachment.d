@@ -54,8 +54,9 @@ class DBSIAttachment : DOOPEntity {
 auto BSIAttachment() { return new DBSIAttachment; } 
 auto BSIAttachment(Json json) { return new DBSIAttachment(json); } 
 
-unittest {
-  version(uim_entities) {
+version(test_library) {
+  unittest {
+    assert(APLFeedback);
     assert(BSIAttachment);
   
   auto entity = BSIAttachment;

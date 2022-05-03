@@ -47,8 +47,9 @@ class DBSINetComponent : DOOPEntity {
 }
 mixin(EntityCalls!("BSINetComponent"));
 
-unittest {
-  version(uim_entities) {
+version(test_library) {
+  unittest {
+    assert(APLFeedback);
     assert(BSINetComponent);
   
   auto entity = BSINetComponent;

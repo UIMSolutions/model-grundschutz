@@ -53,8 +53,9 @@ class DBSIApplicationCategory : DOOPEntity {
 auto BSIApplicationCategory() { return new DBSIApplicationCategory; } 
 auto BSIApplicationCategory(Json json) { return new DBSIApplicationCategory(json); } 
 
-unittest {
-  version(uim_entities) {
+version(test_library) {
+  unittest {
+    assert(APLFeedback);
     assert(BSIApplicationCategory);
   
   auto entity = BSIApplicationCategory;
