@@ -15,5 +15,6 @@ public import uim.oop;
 public import uim.entities;
 
 // model-system packages
+public import models.bsi.attributes;
 public import models.bsi.classes;
 public import models.bsi.entities;
