@@ -3,11 +3,6 @@ module models.bsi.clients.client;
 @safe:
 import models.bsi;
 
-static this() {
-  createEntities[DBSIClient.namespace] = (Json json) => BSIClient(json); 
-  createEntities["bsiClient"] = (Json json) => BSIClient(json); 
-}
-// 
 class DBSIClient : DOOPEntity {
   mixin(EntityThis!("BSIClient"));
   
@@ -48,7 +43,6 @@ mixin(EntityCalls!("BSIClient"));
 
 version(test_library) {
   unittest {
-    assert(APLFeedback);
     assert(BSIClient);
   
   auto entity = BSIClient;
