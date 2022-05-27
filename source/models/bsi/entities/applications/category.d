@@ -48,30 +48,17 @@ class DBSIApplicationCategory : DOOPEntity {
   this(Json aJson) { 
     this(); this.fromJson(aJson); }
 }
-auto BSIApplicationCategory() { return new DBSIApplicationCategory; } 
-auto BSIApplicationCategory(Json json) { return new DBSIApplicationCategory(json); } 
+mixin(EntityCalls!("BSIApplicationCategory"));
 
 version(test_library) {
   unittest {
     assert(BSIApplicationCategory);
   
   auto entity = BSIApplicationCategory;
-  // auto repository = OOPFileRepository("./tests");
-/*  repository.create("entities", entity.entityClasses, entity.toJson);
-
-  auto json = repository.findOne("entities", entity.entityClasses, ["id":entity.id.toString]);
-  assert(json != Json(null), entity.id.toString~" not found");
-
-  repository.cleanupConnections; */
-  }
-}
-
+}}
 /*
 
-
-
 import sernet.verinice.model.common.CnATreeElement;
-
 
 @SuppressWarnings("serial")
 public class AnwendungenKategorie extends CnATreeElement
