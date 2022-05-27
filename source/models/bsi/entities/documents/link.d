@@ -3,11 +3,6 @@ module models.bsi.documents.link;
 @safe:
 import models.bsi;
 
-static this() {
-  createEntities[DBSIDocumentLink.namespace] = (Json json) => BSIDocumentLink(json); 
-  createEntities["bsiDocumentLink"] = (Json json) => BSIDocumentLink(json); 
-}
-// 
 class DBSIDocumentLink : DOOPEntity {
   mixin(EntityThis!("BSIDocumentLink"));
   
@@ -48,7 +43,6 @@ mixin(EntityCalls!("BSIDocumentLink"));
 
 version(test_library) {
   unittest {
-    assert(APLFeedback);
     assert(BSIDocumentLink);
   
   auto entity = BSIDocumentLink;
