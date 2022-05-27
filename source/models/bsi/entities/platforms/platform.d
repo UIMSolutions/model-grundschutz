@@ -3,11 +3,6 @@ module models.bsi.platforms.platform;
 @safe:
 import models.bsi;
 
-static this() {
-  createEntities[DBSIPlatform.namespace] = (Json json) => BSIPlatform(json); 
-  createEntities["bsiPlatform"] = (Json json) => BSIPlatform(json); 
-}
-// 
 class DBSIPlatform : DOOPEntity {
   mixin(EntityThis!("BSIPlatform"));
   
@@ -48,16 +43,8 @@ mixin(EntityCalls!("BSIPlatform"));
 
 version(test_library) {
   unittest {
-    assert(APLFeedback);
     assert(BSIPlatform);
   
   auto entity = BSIPlatform;
-  // auto repository = OOPFileRepository("./tests");
-/*  repository.create("entities", entity.entityClasses, entity.toJson);
-
-  auto json = repository.findOne("entities", entity.entityClasses, ["id":entity.id.toString]);
-  assert(json != Json(null), entity.id.toString~" not found");
-
-  repository.cleanupConnections; */
 	}
 }
