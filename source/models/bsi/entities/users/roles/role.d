@@ -3,11 +3,6 @@ module models.bsi.users.role;
 @safe:
 import models.bsi;
 
-static this() {
-  createEntities[DBSIRole.namespace] = (Json json) => BSIRole(json); 
-  createEntities["bsiRole"] = (Json json) => BSIRole(json); 
-}
-// 
 class DBSIRole : DOOPEntity {
   mixin(EntityThis!("BSIRole"));
   
@@ -48,7 +43,6 @@ mixin(EntityCalls!("BSIRole"));
 
 version(test_library) {
   unittest {
-    assert(APLFeedback);
     assert(BSIRole);
   
   auto entity = BSIRole;
