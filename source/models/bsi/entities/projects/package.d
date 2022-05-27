@@ -1,10 +1,7 @@
 module models.bsi.projects;
 
-@safe:
-import models.bsi;
-
-// Main module
+// Main entity
 public import models.bsi.projects.project;
 
-// Additional module
+// Additional entities
 public import models.bsi.projects.template_;
