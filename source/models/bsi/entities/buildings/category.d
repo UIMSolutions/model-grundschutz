@@ -3,14 +3,12 @@ module models.bsi.buildings.category;
 @safe:
 import models.bsi;
 
-static this() {
-  createEntities[DBSIBuildingCategory.namespace] = (Json json) => BSIBuildingCategory(json); 
-  createEntities["bsiBuildingCategory"] = (Json json) => BSIBuildingCategory(json); 
-}
-// 
 class DBSIBuildingCategory : DOOPEntity {
-  this() { super();
-    this.addValues([
+  override void initialize() {
+    super.initialize;
+
+    this
+      .addValues([
       "projectId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the project with which this entity is associated."}}`,
 /*       "annotationId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the note."}}`,
       "objectTypeCode":`{"datatype":"Integer", "descriptions":{"en":"Type of entity with which the note is associated."}}`,
@@ -55,7 +53,6 @@ auto BSIBuildingCategory(Json json) { return new DBSIBuildingCategory(json); }
 
 version(test_library) {
   unittest {
-    assert(APLFeedback);
     assert(BSIBuildingCategory);
   
   auto entity = BSIBuildingCategory;
