@@ -3,11 +3,6 @@ module models.bsi.systems.category;
 @safe:
 import models.bsi;
 
-static this() {
-  createEntities[DBSISystemCategory.namespace] = (Json json) => BSISystemCategory(json); 
-  createEntities["bsiSystemCategory"] = (Json json) => BSISystemCategory(json); 
-}
-// 
 class DBSISystemCategory : DOOPEntity {
   mixin(EntityThis!("BSISystemCategory"));
   
@@ -48,7 +43,6 @@ mixin(EntityCalls!("BSISystemCategory"));
 
 version(test_library) {
   unittest {
-    assert(APLFeedback);
     assert(BSISystemCategory);
   
   auto entity = BSISystemCategory;
