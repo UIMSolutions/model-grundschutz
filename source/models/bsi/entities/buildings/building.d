@@ -3,14 +3,12 @@ module models.bsi.buildings.building;
 @safe:
 import models.bsi;
 
-static this() {
-  createEntities[DBSIBuilding.namespace] = (Json json) => BSIBuilding(json); 
-  createEntities["bsiBuildingg"] = (Json json) => BSIBuilding(json); 
-}
-// 
-  class DBSIBuilding : DOOPEntity {
-  this() { super();
-    this.addValues([
+class DBSIBuilding : DOOPEntity {
+  override void initialize() {
+    super.initialize;
+
+    this
+      .addValues([
       "projectId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the project with which this entity is associated."}}`,
       "categoryId":`{"datatype":"UUID", "descriptions":{"en":""}}`,
 /*       "annotationId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the note."}}`,
