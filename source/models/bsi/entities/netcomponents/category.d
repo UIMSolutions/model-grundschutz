@@ -3,11 +3,6 @@ module models.bsi.netcomponents.category;
 @safe:
 import models.bsi;
 
-static this() {
-  createEntities[DBSINetComponentCategory.namespace] = (Json json) => BSINetComponentCategory(json); 
-  createEntities["bsiNetcomponentCategory"] = (Json json) => BSINetComponentCategory(json); 
-}
-// 
 class DBSINetComponentCategory : DOOPEntity {
   mixin(EntityThis!("BSINetComponentCategory"));
   
@@ -48,7 +43,6 @@ mixin(EntityCalls!("BSINetComponentCategory"));
 
 version(test_library) {
   unittest {
-    assert(APLFeedback);
     assert(BSINetComponentCategory);
   
   auto entity = BSINetComponentCategory;
