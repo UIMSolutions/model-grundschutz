@@ -3,12 +3,9 @@ module models.bsi.applications.application;
 @safe:
 import models.bsi;
 
-static this() {
-  createEntities[DBSIApplication.namespace] = (Json json) => BSIApplication(json); 
-  createEntities["bsiApplication"] = (Json json) => BSIApplication(json); 
-}
-// 
-  class DBSIApplication : DOOPEntity {
+class DBSIApplication : DOOPEntity {
+  mixin(EntityThis!("BSIApplication"));
+
   this() { super();
     this.addValues([
       "projectId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the project with which this entity is associated."}}`,
@@ -45,25 +42,11 @@ static this() {
       "owningTeamId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the team who owns the note."}}`, */
     ]);
   }
-
-  override string entityClass() { return "bsiApplication"; }
-  override string entityClasses() { return "bsiApplications"; }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
 }
-auto BSIApplication() { return new DBSIApplication; } 
-auto BSIApplication(Json json) { return new DBSIApplication(json); } 
+mixin(EntityCalls!("BSIApplication"));
 
 version(test_library) {
   unittest {
-    assert(APLFeedback);
     assert(BSIApplication);
   
   auto entity = BSIApplication;
