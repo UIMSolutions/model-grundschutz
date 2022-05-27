@@ -3,11 +3,6 @@ module models.bsi.ics_systems.ics_system;
 @safe:
 import models.bsi;
 
-static this() {
-  createEntities[DBSIICSSystem.namespace] = (Json json) => BSIICSSystem(json); 
-  createEntities["bsiICSSystem"] = (Json json) => BSIICSSystem(json); 
-}
-
 class DBSIICSSystem : DOOPEntity {
   mixin(EntityThis!("BSIICSSystem"));
   
@@ -55,7 +50,8 @@ mixin(EntityCalls!("BSIICSSystem"));
 
 version(test_library) {
   unittest {
-    assert(APLFeedback);
+
+
     assert(BSIICSSystem);
   
   auto entity = BSIICSSystem;
