@@ -3,11 +3,6 @@ module models.bsi.projects.project;
 @safe:
 import models.bsi;
 
-static this() {
-  createEntities[DBSIProject.namespace] = (Json json) => BSIProject(json); 
-  createEntities["bsiProject"] = (Json json) => BSIProject(json); 
-}
-// 
 class DBSIProject : DOOPEntity {
   mixin(EntityThis!("BSIProject"));
   
@@ -48,7 +43,6 @@ mixin(EntityCalls!("BSIProject"));
 
 version(test_library) {
   unittest {
-    assert(APLFeedback);
     assert(BSIProject);
   
   auto entity = BSIProject;
