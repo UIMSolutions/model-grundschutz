@@ -3,11 +3,6 @@ module models.bsi.platforms.category;
 @safe:
 import models.bsi;
 
-static this() {
-  createEntities[DBSIPlatformCategory.namespace] = (Json json) => BSIPlatformCategory(json); 
-  createEntities["bsiPlatformCategory"] = (Json json) => BSIPlatformCategory(json); 
-}
-// 
 class DBSIPlatformCategory : DOOPEntity {
   mixin(EntityThis!("OPTRetailChannelCategoryAttribute"));
   
@@ -48,7 +43,6 @@ mixin(EntityCalls!("BSIPlatformCategory"));
 
 version(test_library) {
   unittest {
-    assert(APLFeedback);
     assert(BSIPlatformCategory);
   
   auto entity = BSIPlatformCategory;
