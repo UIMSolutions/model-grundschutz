@@ -3,11 +3,6 @@ module models.bsi.netcomponents.netcomponent;
 @safe:
 import models.bsi;
 
-static this() {
-  createEntities[DBSINetComponent.namespace] = (Json json) => BSINetComponent(json); 
-  createEntities["bsiNetComponent"] = (Json json) => BSINetComponent(json); 
-}
-// 
 class DBSINetComponent : DOOPEntity {
   mixin(EntityThis!("BSINetComponent"));
   
@@ -49,7 +44,6 @@ mixin(EntityCalls!("BSINetComponent"));
 
 version(test_library) {
   unittest {
-    assert(APLFeedback);
     assert(BSINetComponent);
   
   auto entity = BSINetComponent;
