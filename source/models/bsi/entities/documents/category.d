@@ -3,11 +3,6 @@ module models.bsi.documents.category;
 @safe:
 import models.bsi;
 
-static this() {
-  createEntities[DBSIDocumentCategory.namespace] = (Json json) => BSIDocumentCategory(json); 
-  createEntities["bsiDocumentCategory"] = (Json json) => BSIDocumentCategory(json); 
-}
-// 
 class DBSIDocumentCategory : DOOPEntity {
   mixin(EntityThis!("BSIDocumentCategory"));
   
@@ -48,7 +43,6 @@ mixin(EntityCalls!("BSIDocumentCategory"));
 
 version(test_library) {
   unittest {
-    assert(APLFeedback);
     assert(BSIDocumentCategory);
   
   auto entity = BSIDocumentCategory;
