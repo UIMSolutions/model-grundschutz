@@ -3,13 +3,12 @@ module models.bsi.attachments.attachment;
 @safe:
 import models.bsi;
 
-static this() {
-  createEntities[DBSIAttachment.namespace] = (Json json) => BSIAttachment(json); 
-  createEntities["bsiAttachment"] = (Json json) => BSIAttachment(json); 
-}// 
 class DBSIAttachment : DOOPEntity {
-  this() { super();
-    this.addValues([
+  override void initialize() {
+    super.initialize;
+
+    this
+      .addValues([
       "projectId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the project with which this entity is associated."}}`,
 /*       "annotationId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the note."}}`,
       "objectTypeCode":`{"datatype":"Integer", "descriptions":{"en":"Type of entity with which the note is associated."}}`,
