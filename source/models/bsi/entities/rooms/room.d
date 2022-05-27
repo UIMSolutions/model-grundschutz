@@ -3,11 +3,6 @@ module models.bsi.rooms.room;
 @safe:
 import models.bsi;
 
-static this() {
-  createEntities[DBSIRoom.namespace] = (Json json) => BSIRoom(json); 
-  createEntities["bsiRoom"] = (Json json) => BSIRoom(json); 
-}
-// 
 class DBSIRoom : DOOPEntity {
   mixin(EntityThis!("BSIRoom"));
   
@@ -49,7 +44,6 @@ mixin(EntityCalls!("BSIRoom"));
 
 version(test_library) {
   unittest {
-    assert(APLFeedback);
     assert(BSIRoom);
   
   auto entity = BSIRoom;
