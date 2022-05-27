@@ -3,14 +3,12 @@ module models.bsi.clients.category;
 @safe:
 import models.bsi;
 
-static this() {
-  createEntities[DBSIClientCategory.namespace] = (Json json) => BSIClientCategory(json); 
-  createEntities["bsiClientCategory"] = (Json json) => BSIClientCategory(json); 
-}
-// 
 class DBSIClientCategory : DOOPEntity {
-  this() { super();
-    this.addValues([
+  override void initialize() {
+    super.initialize;
+
+    this
+      .addValues([
       "projectId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the project with which this entity is associated."}}`,
 /*       "annotationId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the note."}}`,
       "objectTypeCode":`{"datatype":"Integer", "descriptions":{"en":"Type of entity with which the note is associated."}}`,
@@ -55,7 +53,6 @@ auto BSIClientCategory(Json json) { return new DBSIClientCategory(json); }
 
 version(test_library) {
   unittest {
-    assert(APLFeedback);
     assert(BSIClientCategory);
   
   auto entity = BSIClientCategory;
