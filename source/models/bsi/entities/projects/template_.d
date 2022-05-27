@@ -3,11 +3,6 @@ module models.bsi.projects.template_;
 @safe:
 import models.bsi;
 
-static this() {
-  createEntities[DBSIProjectTemplate.namespace] = (Json json) => BSIProjectTemplate(json); 
-  createEntities["bsiProjectTemplate"] = (Json json) => BSIProjectTemplate(json); 
-}
-// 
 class DBSIProjectTemplate : DOOPEntity {
   mixin(EntityThis!("BSIProjectTemplate"));
   
@@ -48,7 +43,6 @@ mixin(EntityCalls!("BSIProjectTemplate"));
 
 version(test_library) {
   unittest {
-    assert(APLFeedback);
     assert(BSIProjectTemplate);
   
   auto entity = BSIProjectTemplate;
