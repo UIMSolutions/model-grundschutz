@@ -3,15 +3,13 @@ module models.bsi.applications.category;
 @safe:
 import models.bsi;
 
-static this() {
-  createEntities[DBSIApplicationCategory.namespace] = (Json json) => BSIApplicationCategory(json); 
-  createEntities["bsiApplicationgCategory"] = (Json json) => BSIApplicationCategory(json); 
-}
-// 
 class DBSIApplicationCategory : DOOPEntity {
-  this() { super();
-    this.addValues([
-      "projectId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the project with which this entity is associated."}}`,
+  override void initialize() {
+    super.initialize;
+
+    this
+      .addValues([
+        "projectId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the project with which this entity is associated."}}`,
 /*       "annotationId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the note."}}`,
       "objectTypeCode":`{"datatype":"Integer", "descriptions":{"en":"Type of entity with which the note is associated."}}`,
       "objectTypeCode_display":`{"datatype":"String", "descriptions":{"en":""}}`,
@@ -55,7 +53,6 @@ auto BSIApplicationCategory(Json json) { return new DBSIApplicationCategory(json
 
 version(test_library) {
   unittest {
-    assert(APLFeedback);
     assert(BSIApplicationCategory);
   
   auto entity = BSIApplicationCategory;
