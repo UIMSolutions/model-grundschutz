@@ -3,11 +3,6 @@ module models.bsi.requirements.requirement;
 @safe:
 import models.bsi;
 
-static this() {
-  createEntities[DBSIRequirement.namespace] = (Json json) => BSIRequirement(json); 
-  createEntities["bsiRequirement"] = (Json json) => BSIRequirement(json); 
-}
-// 
 class DBSIRequirement : DOOPEntity {
   mixin(EntityThis!("BSIRequirement"));
   
@@ -48,7 +43,6 @@ mixin(EntityCalls!("BSIRequirement"));
 
 version(test_library) {
   unittest {
-    assert(APLFeedback);
     assert(BSIRequirement);
   
   auto entity = BSIRequirement;
