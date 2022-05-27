@@ -6,8 +6,11 @@ import models.bsi;
 class DBSIApplication : DOOPEntity {
   mixin(EntityThis!("BSIApplication"));
 
-  this() { super();
-    this.addValues([
+  override void initialize() {
+    super.initialize;
+
+    this
+      .addValues([
       "projectId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the project with which this entity is associated."}}`,
       "platformId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the platform with which this entity is associated."}}`,
       "confidentialityCode":`{"datatype":"String", "descriptions":{"en":""}}`,
