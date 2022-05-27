@@ -1,10 +1,7 @@
 module models.bsi.ics_systems;
 
-@safe:
-import models.bsi;
-
-// Main module
+// Main entity
 public import models.bsi.ics_systems.ics_system;
 
-// Additional module
+// Additional entities
 public import models.bsi.ics_systems.category;
