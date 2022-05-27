@@ -3,11 +3,6 @@ module models.bsi.users.user;
 @safe:
 import models.bsi;
 
-static this() {
-  createEntities[DBSIUser.namespace] = (Json json) => BSIUser(json); 
-  createEntities["bsiUser"] = (Json json) => BSIUser(json); 
-}
-// 
 class DBSIUser : DOOPEntity {
   mixin(EntityThis!("BSIUser"));
   
@@ -48,7 +43,6 @@ mixin(EntityCalls!("BSIUser"));
 
 version(test_library) {
   unittest {
-    assert(APLFeedback);
     assert(BSIUser);
   
   auto entity = BSIUser;
