@@ -3,11 +3,6 @@ module models.bsi.documents.document;
 @safe:
 import models.bsi;
 
-static this() {
-  createEntities[DBSIDocument.namespace] = (Json json) => BSIDocument(json); 
-  createEntities["bsiDocument"] = (Json json) => BSIDocument(json); 
-}
-// 
 class DBSIDocument : DOOPEntity {
   mixin(EntityThis!("BSIDocument"));
   
@@ -48,7 +43,6 @@ mixin(EntityCalls!("BSIDocument"));
 
 version(test_library) {
   unittest {
-    assert(APLFeedback);
     assert(BSIDocument);
   
   auto entity = BSIDocument;
