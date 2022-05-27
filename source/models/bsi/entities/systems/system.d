@@ -3,11 +3,6 @@ module models.bsi.systems.system;
 @safe:
 import models.bsi;
 
-static this() {
-  createEntities[DBSISystem.namespace] = (Json json) => BSISystem(json); 
-  createEntities["bsiSystem"] = (Json json) => BSISystem(json); 
-}
-// 
 class DBSISystem : DOOPEntity {
   mixin(EntityThis!("BSISystem"));
   
@@ -55,16 +50,8 @@ mixin(EntityCalls!("BSISystem"));
 
 version(test_library) {
   unittest {
-    assert(APLFeedback);
     assert(BSISystem);
   
   auto entity = BSISystem;
-  // auto repository = OOPFileRepository("./tests");
-/*  repository.create("entities", entity.entityClasses, entity.toJson);
-
-  auto json = repository.findOne("entities", entity.entityClasses, ["id":entity.id.toString]);
-  assert(json != Json(null), entity.id.toString~" not found");
-
-  repository.cleanupConnections; */
-	}
+}
 }
