@@ -1,9 +1,8 @@
 module models.bsi.netcomponents;
 
-@safe:
-import models.bsi;
-
+// Main entity
 public import models.bsi.netcomponents.netcomponent;
 
+// Additional entities
 public import models.bsi.netcomponents.category;
 
