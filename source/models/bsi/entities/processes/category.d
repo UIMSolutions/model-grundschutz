@@ -3,11 +3,6 @@ module models.bsi.processes.category;
 @safe:
 import models.bsi;
 
-static this() {
-  createEntities[DBSIProcessCategory.namespace] = (Json json) => BSIProcessCategory(json); 
-  createEntities["bsiProcessCategory"] = (Json json) => BSIProcessCategory(json); 
-}
-// 
 class DBSIProcessCategory : DOOPEntity {
   mixin(EntityThis!("BSIProcessCategory"));
   
@@ -48,7 +43,6 @@ mixin(EntityCalls!("BSIProcessCategory"));
 
 version(test_library) {
   unittest {
-    assert(APLFeedback);
     assert(BSIProcessCategory);
   
   auto entity = BSIProcessCategory;
