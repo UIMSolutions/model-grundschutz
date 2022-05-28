@@ -1,8 +1,5 @@
-module models.bsi.requirements;
-
-@safe:
-import models.bsi;
+module models.bsi.entities.requirements;
 
 // Main module
-public import models.bsi.requirements.requirement;
+public import models.bsi.entities.requirements.requirement;
 
