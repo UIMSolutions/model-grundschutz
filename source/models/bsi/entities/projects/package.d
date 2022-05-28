@@ -1,7 +1,7 @@
-module models.bsi.projects;
+module models.bsi.entities.projects;
 
 // Main entity
-public import models.bsi.projects.project;
+public import models.bsi.entities.projects.project;
 
 // Additional entities
-public import models.bsi.projects.template_;
+public import models.bsi.entities.projects.template_;
