@@ -1,10 +1,7 @@
-module models.bsi.platforms;
+module models.bsi.entities.platforms;
 
-@safe:
-import models.bsi;
+// Main entity
+public import models.bsi.entities.platforms.platform;
 
-// Main module
-public import models.bsi.platforms.platform;
-
-// Additional module
-public import models.bsi.platforms.category;
+// Additional entities
+public import models.bsi.entities.platforms.category;
