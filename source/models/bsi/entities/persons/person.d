@@ -1,13 +1,8 @@
-module models.bsi.persons.person;
+module models.bsi.entities.persons.person;
 
 @safe:
 import models.bsi;
 
-static this() {
-  createEntities[DBSIPerson.namespace] = (Json json) => BSIPerson(json); 
-  createEntities["bsiPerson"] = (Json json) => BSIPerson(json); 
-}
-// 
 class DBSIPerson : DOOPEntity {
   mixin(EntityThis!("BSIPerson"));
   
@@ -52,12 +47,6 @@ version(test_library) {
     assert(BSIPerson);
   
   auto entity = BSIPerson;
-  // auto repository = OOPFileRepository("./tests");
-/*  repository.create("entities", entity.entityClasses, entity.toJson);
 
-  auto json = repository.findOne("entities", entity.entityClasses, ["id":entity.id.toString]);
-  assert(json != Json(null), entity.id.toString~" not found");
-
-  repository.cleanupConnections; */
   }
 }
