@@ -1,10 +1,7 @@
-module models.bsi.clients;
-
-@safe:
-import models.bsi;
+module models.bsi.entities.clients;
 
 // Main module
-public import models.bsi.clients.client;
+public import models.bsi.entities.clients.client;
 
 // Additional module
-public import models.bsi.clients.category;
+public import models.bsi.entities.clients.category;
