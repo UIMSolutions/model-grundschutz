@@ -4,6 +4,8 @@ module models.bsi.attachments.attachment;
 import models.bsi;
 
 class DBSIAttachment : DOOPEntity {
+  mixin(EntityThis!("BSIAttachment"));
+
   override void initialize() {
     super.initialize;
 
