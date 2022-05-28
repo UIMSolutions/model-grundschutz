@@ -1,10 +1,9 @@
-module models.bsi.users;
+module models.bsi.entities.users;
 
-@safe:
-import models.bsi;
+// Package
+public import models.bsi.entities.users.roles;
 
-public import models.bsi.users.roles;
-
-public import models.bsi.users.user;
+// Main entity
+public import models.bsi.entities.users.user;
 
 
