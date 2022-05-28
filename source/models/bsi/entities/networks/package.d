@@ -1,9 +1,6 @@
-module models.bsi.networks;
+module models.bsi.entities.networks;
 
-@safe:
-import models.bsi;
+public import models.bsi.entities.networks.network;
 
-public import models.bsi.networks.network;
-
-public import models.bsi.networks.category;
+public import models.bsi.entities.networks.category;
 
