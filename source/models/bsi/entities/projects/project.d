@@ -1,4 +1,4 @@
-module models.bsi.projects.project;
+module models.bsi.entities.projects.project;
 
 @safe:
 import models.bsi;
