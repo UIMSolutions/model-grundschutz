@@ -50,7 +50,6 @@ version(test_library) {
 }
 
 /*
-
 import sernet.verinice.model.common.CnATreeElement;
 
 public class DocumentCategoryenKategorie extends CnATreeElement implements IBSIStrukturKategorie {
@@ -67,15 +66,13 @@ public class DocumentCategoryenKategorie extends CnATreeElement implements IBSIS
 		
 	}
 	
-	@Override
 	public String getTypeId() {
 		return TYPE_ID;
 	}
 	
-	@Override
 	public boolean canContain(Object obj) {
 		if (obj instanceof DocumentCategory){
-			return true;
+		 return true;
 		}
 		return false;
 	}
