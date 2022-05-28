@@ -1,8 +1,5 @@
-module models.bsi.risks;
-
-@safe:
-import models.bsi;
+module models.bsi.entities.risks;
 
 // Main module
-public import models.bsi.risks.risk;
+public import models.bsi.entities.risks.risk;
 
