@@ -1,4 +1,4 @@
-module models.bsi.documents.category;
+module models.bsi.entities.documents.category;
 
 @safe:
 import models.bsi;
