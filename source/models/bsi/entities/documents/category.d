@@ -46,13 +46,6 @@ version(test_library) {
     assert(BSIDocumentCategory);
   
   auto entity = BSIDocumentCategory;
-  // auto repository = OOPFileRepository("./tests");
-/*  repository.create("entities", entity.entityClasses, entity.toJson);
-
-  auto json = repository.findOne("entities", entity.entityClasses, ["id":entity.id.toString]);
-  assert(json != Json(null), entity.id.toString~" not found");
-
-  repository.cleanupConnections; */
   }
 }
 
