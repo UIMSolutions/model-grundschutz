@@ -4,12 +4,14 @@ module models.bsi.entities.clients.category;
 import models.bsi;
 
 class DBSIClientCategory : DOOPEntity {
+  mixin(EntityThis!("BSIClientCategory"));
+
   override void initialize() {
     super.initialize;
 
     this
       .addValues([
-      "projectId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the project with which this entity is associated."}}`,
+      "projectId": UUIDAttribute, // {"en":"Unique identifier of the project with which this entity is associated."}}`,
 /*       "annotationId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the note."}}`,
       "objectTypeCode":`{"datatype":"Integer", "descriptions":{"en":"Type of entity with which the note is associated."}}`,
       "objectTypeCode_display":`{"datatype":"String", "descriptions":{"en":""}}`,
