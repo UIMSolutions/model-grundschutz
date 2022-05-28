@@ -1,4 +1,4 @@
-module models.bsi.clients.category;
+module models.bsi.entities.clients.category;
 
 @safe:
 import models.bsi;
@@ -35,18 +35,6 @@ class DBSIClientCategory : DOOPEntity {
       "owningTeamId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the team who owns the note."}}`, */
     ]);
   }
-
-  override string entityClass() { return "bsiClientCategory"; }
-  override string entityClasses() { return "bsiClientCategories"; }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
 }
 auto BSIClientCategory() { return new DBSIClientCategory; } 
 auto BSIClientCategory(Json json) { return new DBSIClientCategory(json); } 
@@ -56,20 +44,10 @@ version(test_library) {
     assert(BSIClientCategory);
   
   auto entity = BSIClientCategory;
-  // auto repository = OOPFileRepository("./tests");
-/*  repository.create("entities", entity.entityClasses, entity.toJson);
-
-  auto json = repository.findOne("entities", entity.entityClasses, ["id":entity.id.toString]);
-  assert(json != Json(null), entity.id.toString~" not found");
-
-  repository.cleanupConnections; */
   }
 }
 
 /*
-
-
-
 import sernet.verinice.model.common.CnATreeElement;
 
 
