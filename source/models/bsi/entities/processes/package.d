@@ -1,7 +1,7 @@
-module models.bsi.processes;
+module models.bsi.entities.processes;
 
-// Main module
-public import models.bsi.processes.process;
+// Main entity
+public import models.bsi.entities.processes.process;
 
-// Additional module
-public import models.bsi.processes.category;
+// Additional entities
+public import models.bsi.entities.processes.category;
