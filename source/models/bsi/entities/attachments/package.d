@@ -1,10 +1,7 @@
-module models.bsi.attachments;
-
-@safe:
-import models.bsi;
+module models.bsi.entities.attachments;
 
 // Main module
-public import models.bsi.attachments.attachment;
+public import models.bsi.entities.attachments.attachment;
 
 // Additional module
-public import models.bsi.attachments.file;
+public import models.bsi.entities.attachments.file;
