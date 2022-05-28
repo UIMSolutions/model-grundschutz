@@ -1,4 +1,4 @@
-module models.bsi.rooms.category;
+module models.bsi.entities.rooms.category;
 
 @safe:
 import models.bsi;
