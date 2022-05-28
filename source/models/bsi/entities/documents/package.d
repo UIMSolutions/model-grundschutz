@@ -1,12 +1,9 @@
 module models.bsi.documents;
 
-@safe:
-import models.bsi;
-
-// Main module
+// Main entity
 public import models.bsi.documents.document;
 
-// Additional modules
+// Additional entities
 public import models.bsi.documents.category;
 public import models.bsi.documents.link;
 public import models.bsi.documents.linkroot;
