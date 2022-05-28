@@ -1,4 +1,4 @@
-module models.bsi.projects.template_;
+module models.bsi.entities.projects.template_;
 
 @safe:
 import models.bsi;
