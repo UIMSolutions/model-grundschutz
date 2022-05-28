@@ -1,5 +1,5 @@
 module models.bsi.entities.requirements;
 
-// Main module
+// Main entity
 public import models.bsi.entities.requirements.requirement;
 
