@@ -1,9 +1,6 @@
-module models.bsi.persons;
+module models.bsi.entities.persons;
 
-@safe:
-import models.bsi;
+public import models.bsi.entities.persons.person;
 
-public import models.bsi.persons.person;
-
-public import models.bsi.persons.category;
+public import models.bsi.entities.persons.category;
 
