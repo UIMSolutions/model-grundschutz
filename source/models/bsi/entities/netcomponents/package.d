@@ -1,8 +1,8 @@
-module models.bsi.netcomponents;
+module models.bsi.entities.netcomponents;
 
 // Main entity
-public import models.bsi.netcomponents.netcomponent;
+public import models.bsi.entities.netcomponents.netcomponent;
 
 // Additional entities
-public import models.bsi.netcomponents.category;
+public import models.bsi.entities.netcomponents.category;
 
