@@ -1,7 +1,7 @@
 module models.bsi.entities.clients;
 
-// Main module
+// Main entity
 public import models.bsi.entities.clients.client;
 
-// Additional module
+// Additional entities
 public import models.bsi.entities.clients.category;
