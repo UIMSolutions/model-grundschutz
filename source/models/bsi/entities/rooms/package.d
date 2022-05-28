@@ -1,7 +1,4 @@
-module models.bsi.rooms;
+module models.bsi.entities.rooms;
 
-@safe:
-import models.bsi;
-
-public import models.bsi.rooms.room;
-public import models.bsi.rooms.category;
+public import models.bsi.entities.rooms.room;
+public import models.bsi.entities.rooms.category;
