@@ -1,4 +1,4 @@
-module models.bsi.platforms.platform;
+module models.bsi.entities.platforms.platform;
 
 @safe:
 import models.bsi;
