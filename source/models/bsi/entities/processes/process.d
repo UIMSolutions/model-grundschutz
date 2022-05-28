@@ -1,4 +1,4 @@
-module models.bsi.processes.process;
+module models.bsi.entities.processes.process;
 
 @safe:
 import models.bsi;
@@ -46,12 +46,5 @@ version(test_library) {
     assert(BSIProcess);
   
   auto entity = BSIProcess;
-  // auto repository = OOPFileRepository("./tests");
-/*  repository.create("entities", entity.entityClasses, entity.toJson);
-
-  auto json = repository.findOne("entities", entity.entityClasses, ["id":entity.id.toString]);
-  assert(json != Json(null), entity.id.toString~" not found");
-
-  repository.cleanupConnections; */
 	}
 }
