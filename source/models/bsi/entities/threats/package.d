@@ -1,8 +1,5 @@
-module models.bsi.threats;
-
-@safe:
-import models.bsi;
+module models.bsi.entities.threats;
 
 // Main module
-public import models.bsi.threats.threat;
+public import models.bsi.entities.threats.threat;
 
