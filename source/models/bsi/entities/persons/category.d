@@ -1,9 +1,7 @@
-module models.bsi.persons.category;
+module models.bsi.entities.persons.category;
 
 @safe:
 import models.bsi;
-
-
 
 class DBSIPersonCategory : DOOPEntity {
   mixin(EntityThis!("BSIPersonCategory"));
@@ -49,12 +47,5 @@ version(test_library) {
     assert(BSIPersonCategory);
   
   auto entity = BSIPersonCategory;
-  // auto repository = OOPFileRepository("./tests");
-/*  repository.create("entities", entity.entityClasses, entity.toJson);
-
-  auto json = repository.findOne("entities", entity.entityClasses, ["id":entity.id.toString]);
-  assert(json != Json(null), entity.id.toString~" not found");
-
-  repository.cleanupConnections; */
   }
 }
