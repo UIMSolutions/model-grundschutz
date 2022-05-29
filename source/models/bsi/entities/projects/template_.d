@@ -1,10 +1,10 @@
-module models.bsi.entities.projects.template_;
+module models.grundschutz.entities.projects.template_;
 
 @safe:
-import models.bsi;
+import models.grundschutz;
 
-class DBSIProjectTemplate : DOOPEntity {
-  mixin(EntityThis!("BSIProjectTemplate"));
+class DBSIProjectTemplateEntity : DOOPEntity {
+  mixin(EntityThis!("BSIProjectTemplateEntity"));
   
   override void initialize() {
     super.initialize;
@@ -36,22 +36,15 @@ class DBSIProjectTemplate : DOOPEntity {
         "modifiedOnBehalfBy":`{"datatype":"UserId", "descriptions":{"en":"Unique identifier of the delegate user who last modified the annotation."}}`,
         "owningTeamId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the team who owns the note."}}`, */
       ])
-      .registerPath("bsi_projecttemplates");
+      .registerPath("grundschutz_projecttemplates");
   }
 }
-mixin(EntityCalls!("BSIProjectTemplate"));
+mixin(EntityCalls!("BSIProjectTemplateEntity"));
 
 version(test_library) {
   unittest {
-    assert(BSIProjectTemplate);
+    assert(BSIProjectTemplateEntity);
   
-  auto entity = BSIProjectTemplate;
-  // auto repository = OOPFileRepository("./tests");
-/*  repository.create("entities", entity.entityClasses, entity.toJson);
-
-  auto json = repository.findOne("entities", entity.entityClasses, ["id":entity.id.toString]);
-  assert(json != Json(null), entity.id.toString~" not found");
-
-  repository.cleanupConnections; */
+  auto entity = BSIProjectTemplateEntity;
   }
 }
