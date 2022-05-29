@@ -1,10 +1,10 @@
-module models.bsi.threats.threat;
+module models.grundschutz.threats.threat;
 
 @safe:
-import models.bsi;
+import models.grundschutz;
 
-class DBSIThreat : DOOPEntity {
-  mixin(EntityThis!("BSIThreat"));
+class DBSIThreatEntity : DOOPEntity {
+  mixin(EntityThis!("BSIThreatEntity"));
   
   override void initialize() {
     super.initialize;
@@ -39,21 +39,14 @@ class DBSIThreat : DOOPEntity {
       .registerPath("bsi_threats");
   }
 }
-mixin(EntityCalls!("BSIThreat"));
+mixin(EntityCalls!("BSIThreatEntity"));
 
 
 version(test_library) {
   unittest {
-    assert(APLFeedback);
-    assert(BSIThreat);
+    
+    assert(BSIThreatEntity);
   
-  auto entity = BSIThreat;
-  // auto repository = OOPFileRepository("./tests");
-/*  repository.create("entities", entity.entityClasses, entity.toJson);
-
-  auto json = repository.findOne("entities", entity.entityClasses, ["id":entity.id.toString]);
-  assert(json != Json(null), entity.id.toString~" not found");
-
-  repository.cleanupConnections; */
+  auto entity = BSIThreatEntity;
 	}
 }
