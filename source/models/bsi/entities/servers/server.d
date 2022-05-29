@@ -1,4 +1,4 @@
-module models.bsi.servers.server;
+module models.bsi.entities.servers.server;
 
 @safe:
 import models.bsi;
@@ -52,12 +52,5 @@ version(test_library) {
     assert(BSIServer);
   
   auto entity = BSIServer;
-  // auto repository = OOPFileRepository("./tests");
-/*  repository.create("entities", entity.entityClasses, entity.toJson);
-
-  auto json = repository.findOne("entities", entity.entityClasses, ["id":entity.id.toString]);
-  assert(json != Json(null), entity.id.toString~" not found");
-
-  repository.cleanupConnections; */
 	}
 }
