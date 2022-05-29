@@ -1,15 +1,16 @@
-module models.bsi.buildings.building;
+module models.grundschutz.buildings.building;
 
 @safe:
-import models.bsi;
+import models.grundschutz;
 
-class DBSIBuilding : DOOPEntity {
+class DBSIBuildingEntity : DOOPEntity {
+
   override void initialize() {
     super.initialize;
 
     this
       .addValues([
-      "projectId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the project with which this entity is associated."}}`,
+      "projectId": UUIDAttribute, // ", "descriptions":{"en":"Unique identifier of the project with which this entity is associated."}}`,
       "categoryId":`{"datatype":"UUID", "descriptions":{"en":""}}`,
 /*       "annotationId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the note."}}`,
       "objectTypeCode":`{"datatype":"Integer", "descriptions":{"en":"Type of entity with which the note is associated."}}`,
@@ -36,25 +37,12 @@ class DBSIBuilding : DOOPEntity {
       "owningTeamId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the team who owns the note."}}`, */
     ]);
   }
-
-  override string entityClass() { return "bsiBuilding"; }
-  override string entityClasses() { return "bsiBuildings"; }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
 }
 auto BSIBuilding() { return new DBSIBuilding; } 
 auto BSIBuilding(Json json) { return new DBSIBuilding(json); } 
 
 version(test_library) {
   unittest {
-    assert(APLFeedback);
     assert(BSIBuilding);
   
   auto entity = BSIBuilding;
