@@ -1,10 +1,10 @@
-module models.bsi.netcomponents.category;
+module models.grundschutz.netcomponents.category;
 
 @safe:
-import models.bsi;
+import models.grundschutz;
 
-class DBSINetComponentCategory : DOOPEntity {
-  mixin(EntityThis!("BSINetComponentCategory"));
+class DBSINetComponentCategoryEntity : DOOPEntity {
+  mixin(EntityThis!("BSINetComponentCategoryEntity"));
   
   override void initialize() {
     super.initialize;
@@ -36,22 +36,15 @@ class DBSINetComponentCategory : DOOPEntity {
         "modifiedOnBehalfBy":`{"datatype":"UserId", "descriptions":{"en":"Unique identifier of the delegate user who last modified the annotation."}}`,
         "owningTeamId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the team who owns the note."}}`, */
       ])
-      .registerPath("bsi_netcomponentcategories");
+      .registerPath("grundschutz_netcomponentcategories");
   }
 }
-mixin(EntityCalls!("BSINetComponentCategory"));
+mixin(EntityCalls!("BSINetComponentCategoryEntity"));
 
 version(test_library) {
   unittest {
-    assert(BSINetComponentCategory);
+    assert(BSINetComponentCategoryEntity);
   
-  auto entity = BSINetComponentCategory;
-  // auto repository = OOPFileRepository("./tests");
-/*  repository.create("entities", entity.entityClasses, entity.toJson);
-
-  auto json = repository.findOne("entities", entity.entityClasses, ["id":entity.id.toString]);
-  assert(json != Json(null), entity.id.toString~" not found");
-
-  repository.cleanupConnections; */
+  auto entity = BSINetComponentCategoryEntity;
   }
 }
