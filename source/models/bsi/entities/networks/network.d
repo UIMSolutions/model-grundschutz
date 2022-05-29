@@ -1,13 +1,8 @@
-module models.bsi.networks.network;
+module models.grundschutz.entities.networks.network;
 
 @safe:
-import models.bsi;
+import models.grunddschutz;
 
-static this() {
-  createEntities[DBSINetwork.namespace] = (Json json) => BSINetwork(json); 
-  createEntities["bsiNetwork"] = (Json json) => BSINetwork(json); 
-}
-// 
 class DBSINetwork : DOOPEntity {
   mixin(EntityThis!("OPTRetailCDXDataStoreChannel"));
   
