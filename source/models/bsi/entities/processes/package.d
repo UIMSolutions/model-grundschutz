@@ -1,7 +1,7 @@
-module models.bsi.entities.processes;
+module models.grundschutz.entities.processes;
 
 // Main entity
-public import models.bsi.entities.processes.process;
+public import models.grundschutz.entities.processes.process;
 
 // Additional entities
-public import models.bsi.entities.processes.category;
+public import models.grundschutz.entities.processes.category;
