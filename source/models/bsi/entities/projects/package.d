@@ -1,7 +1,7 @@
-module models.bsi.entities.projects;
+module models.grundschutz.entities.projects;
 
 // Main entity
-public import models.bsi.entities.projects.project;
+public import models.grundschutz.entities.projects.project;
 
 // Additional entities
-public import models.bsi.entities.projects.template_;
+public import models.grundschutz.entities.projects.template_;
