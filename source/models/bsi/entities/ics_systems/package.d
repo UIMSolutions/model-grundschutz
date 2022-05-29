@@ -1,7 +1,7 @@
-module models.bsi.ics_systems;
+module models.grundschutz.ics_systems;
 
 // Main entity
-public import models.bsi.ics_systems.ics_system;
+public import models.grundschutz.ics_systems.ics_system;
 
 // Additional entities
-public import models.bsi.ics_systems.category;
+public import models.grundschutz.ics_systems.category;
