@@ -1,4 +1,4 @@
-module models.grundschutz.clients.client;
+module models.grundschutz.entities.clients.client;
 
 @safe:
 import models.grundschutz;
