@@ -1,10 +1,10 @@
-module models.bsi.entities.ics_systems.category;
+module models.grundschutz.entities.ics_systems.category;
 
 @safe:
-import models.bsi;
+import models.grundschutz;
 
-class DBSIICSSystemCategory : DOOPEntity {
-  mixin(EntityThis!("BSIICSSystemCategory"));
+class DBSIICSSystemCategoryEntity : DOOPEntity {
+  mixin(EntityThis!("BSIICSSystemCategoryEntity"));
   
   override void initialize() {
     super.initialize;
@@ -36,15 +36,15 @@ class DBSIICSSystemCategory : DOOPEntity {
         "modifiedOnBehalfBy":`{"datatype":"UserId", "descriptions":{"en":"Unique identifier of the delegate user who last modified the annotation."}}`,
         "owningTeamId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the team who owns the note."}}`, */
       ])
-      .registerPath("bsi_icssystemcategories");
+      .registerPath("grundschutz_icssystems.categories");
   }
 }
-mixin(EntityCalls!("BSIICSSystemCategory"));
+mixin(EntityCalls!("BSIICSSystemCategoryEntity"));
 
 version(test_library) {
   unittest {
-    assert(BSIICSSystemCategory);
+    assert(BSIICSSystemCategoryEntity);
   
-  auto entity = BSIICSSystemCategory;
+  auto entity = BSIICSSystemCategoryEntity;
   }
 }
