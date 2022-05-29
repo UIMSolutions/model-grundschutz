@@ -1,4 +1,4 @@
-module models.bsi.applications.application;
+module models.bsi.entities.applications.application;
 
 @safe:
 import models.bsi;
@@ -11,7 +11,7 @@ class DBSIApplication : DOOPEntity {
 
     this
       .addValues([
-      "projectId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the project with which this entity is associated."}}`,
+      "projectId": UUIDAttribute, //", "descriptions":{"en":"Unique identifier of the project with which this entity is associated."}}`,
       "platformId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the platform with which this entity is associated."}}`,
       "confidentialityCode":`{"datatype":"String", "descriptions":{"en":""}}`,
       "confidentialityReason":`{"datatype":"String", "descriptions":{"en":""}}`,
@@ -53,13 +53,7 @@ version(test_library) {
     assert(BSIApplication);
   
   auto entity = BSIApplication;
-  // auto repository = OOPFileRepository("./tests");
-/*  repository.create("entities", entity.entityClasses, entity.toJson);
 
-  auto json = repository.findOne("entities", entity.entityClasses, ["id":entity.id.toString]);
-  assert(json != Json(null), entity.id.toString~" not found");
-
-  repository.cleanupConnections; */
 	}
 }
 
