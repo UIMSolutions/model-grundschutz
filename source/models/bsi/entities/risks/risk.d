@@ -1,15 +1,10 @@
-module models.bsi.risks.risk;
+module models.grundschutz.risks.risk;
 
 @safe:
-import models.bsi;
+import models.grundschutz;
 
-static this() {
-  createEntities[DBSIRisk.namespace] = (Json json) => BSIRisk(json); 
-  createEntities["bsiRisk"] = (Json json) => BSIRisk(json); 
-}
-// 
-class DBSIRisk : DOOPEntity {
-  mixin(EntityThis!("BSIRisk"));
+class DBSIRiskEntity : DOOPEntity {
+  mixin(EntityThis!("BSIRiskEntity"));
   
   override void initialize() {
     super.initialize;
@@ -44,20 +39,12 @@ class DBSIRisk : DOOPEntity {
       .registerPath("bsi_risks");
   }
 }
-mixin(EntityCalls!("BSIRisk"));
+mixin(EntityCalls!("BSIRiskEntity"));
 
 version(test_library) {
   unittest {
-    assert(APLFeedback);
-    assert(BSIRisk);
+    assert(BSIRiskEntity);
   
-  auto entity = BSIRisk;
-  // auto repository = OOPFileRepository("./tests");
-/*  repository.create("entities", entity.entityClasses, entity.toJson);
-
-  auto json = repository.findOne("entities", entity.entityClasses, ["id":entity.id.toString]);
-  assert(json != Json(null), entity.id.toString~" not found");
-
-  repository.cleanupConnections; */
+  auto entity = BSIRiskEntity;
 	}
 }
