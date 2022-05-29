@@ -1,11 +1,11 @@
 module models.grundschutz;
 
-@safe:
+// Phobos packages
 public import std.stdio;
 public import std.string;
 public import std.uuid;
 
-// Dub
+// Dub packages
 public import colored;
 public import vibe.d;
 
@@ -14,7 +14,7 @@ public import uim.core;
 public import uim.oop;
 public import uim.entities;
 
-// model-system packages
-public import models.bsi.attributes;
-public import models.bsi.classes;
-public import models.bsi.entities;
+// model-grundschutz packages
+public import models.grundschutz.attributes;
+public import models.grundschutz.classes;
+public import models.grundschutz.entities;
