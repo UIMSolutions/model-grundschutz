@@ -1,15 +1,10 @@
 module models.grunschutz.entities.networks.category;
 
 @safe:
-import modelsgrundschutz;
+import models.grundschutz;
 
-static this() {
-  createEntities[DBSINetworkCategory.namespace] = (Json json) => BSINetworkCategory(json); 
-  createEntities["bsiNetworkCategory"] = (Json json) => BSINetworkCategory(json); 
-}
-// 
-class DBSINetworkCategory : DOOPEntity {
-  mixin(EntityThis!("BSINetworkCategory"));
+class DBSINetworkCategoryEntity : DOOPEntity {
+  mixin(EntityThis!("BSINetworkCategoryEntity"));
   
   override void initialize() {
     super.initialize;
@@ -44,20 +39,12 @@ class DBSINetworkCategory : DOOPEntity {
       .registerPath("bsi_networkcategory");
   }
 }
-mixin(EntityCalls!("BSINetworkCategory"));
+mixin(EntityCalls!("BSINetworkCategoryEntity"));
 
 version(test_library) {
   unittest {
-    assert(APLFeedback);
-    assert(BSINetworkCategory);
+    assert(BSINetworkCategoryEntity);
   
-  auto entity = BSINetworkCategory;
-  // auto repository = OOPFileRepository("./tests");
-/*  repository.create("entities", entity.entityClasses, entity.toJson);
-
-  auto json = repository.findOne("entities", entity.entityClasses, ["id":entity.id.toString]);
-  assert(json != Json(null), entity.id.toString~" not found");
-
-  repository.cleanupConnections; */
+  auto entity = BSINetworkCategoryEntity;
   }
 }
