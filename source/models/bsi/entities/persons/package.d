@@ -1,8 +1,8 @@
-module models.bsi.entities.persons;
+module models.grundschutz.entities.persons;
 
 // Main entity
-public import models.bsi.entities.persons.person;
+public import models.grundschutz.entities.persons.person;
 
 // Additional entities
-public import models.bsi.entities.persons.category;
+public import models.grundschutz.entities.persons.category;
 
