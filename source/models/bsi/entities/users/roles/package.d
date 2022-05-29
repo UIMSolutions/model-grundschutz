@@ -1,9 +1,6 @@
-module models.bsi.users.roles;
+module models.grundschutz.entities.users.roles;
 
-@safe:
-import models.bsi;
-
-public import models.bsi.users.role;
+public import models.grundschutz.entities.users.role;
 
 
 
