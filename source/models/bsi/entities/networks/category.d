@@ -1,7 +1,7 @@
 module models.grunschutz.entities.networks.category;
 
 @safe:
-import models.bsi;
+import modelsgrundschutz;
 
 static this() {
   createEntities[DBSINetworkCategory.namespace] = (Json json) => BSINetworkCategory(json); 
