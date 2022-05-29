@@ -1,10 +1,10 @@
-module models.bsi.entities.applications.category;
+module models.grundschutz.entities.applications.category;
 
 @safe:
-import models.bsi;
+import models.grundschutz;
 
-class DBSIApplicationCategory : DOOPEntity {
-  mixin(EntityThis!("BSIApplicationCategory"));
+class DBSIApplicationCategoryEntity : DOOPEntity {
+  mixin(EntityThis!("BSIApplicationCategoryEntity"));
 
   override void initialize() {
     super.initialize;
@@ -38,13 +38,13 @@ class DBSIApplicationCategory : DOOPEntity {
     ]);
   }
 }
-mixin(EntityCalls!("BSIApplicationCategory"));
+mixin(EntityCalls!("BSIApplicationCategoryEntity"));
 
 version(test_library) {
   unittest {
-    assert(BSIApplicationCategory);
+    assert(BSIApplicationCategoryEntity);
   
-  auto entity = BSIApplicationCategory;
+  auto entity = BSIApplicationCategoryEntity;
 }}
 
 /*
