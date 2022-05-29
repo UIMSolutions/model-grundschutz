@@ -1,10 +1,10 @@
-module models.bsi.entities.platforms.category;
+module models.grundschutz.entities.platforms.category;
 
 @safe:
-import models.bsi;
+import models.grundschutz;
 
-class DBSIPlatformCategory : DOOPEntity {
-  mixin(EntityThis!("OPTRetailChannelCategoryAttribute"));
+class DBSIPlatformCategoryEntity : DOOPEntity {
+  mixin(EntityThis!("BSIPlatformCategoryEntity"));
   
   override void initialize() {
     super.initialize;
@@ -39,12 +39,12 @@ class DBSIPlatformCategory : DOOPEntity {
       .registerPath("bsi_platformcategories");
   }
 }
-mixin(EntityCalls!("BSIPlatformCategory"));
+mixin(EntityCalls!("BSIPlatformCategoryEntity"));
 
 version(test_library) {
   unittest {
-    assert(BSIPlatformCategory);
+    assert(BSIPlatformCategoryEntity);
   
-  auto entity = BSIPlatformCategory;
+  auto entity = BSIPlatformCategoryEntity;
   }
 }
