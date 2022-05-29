@@ -39,13 +39,13 @@ class DBSIClientEntity : DOOPEntity {
       .registerPath("bsi_clients");
   }
 }
-mixin(EntityCalls!("BSIClient"));
+mixin(EntityCalls!("BSIClientEntity"));
 
 version(test_library) {
   unittest {
-    assert(BSIClient);
+    assert(BSIClientCategoryEntity);
   
-  auto entity = BSIClient;
+  auto entity = BSIClientEntity;
 	}
 }
 
