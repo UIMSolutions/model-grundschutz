@@ -1,10 +1,10 @@
-module models.bsi.entities.persons.person;
+module models.grundschutz.entities.persons.person;
 
 @safe:
-import models.bsi;
+import models.grundschutz;
 
-class DBSIPerson : DOOPEntity {
-  mixin(EntityThis!("BSIPerson"));
+class DBSIPersonEntity : DOOPEntity {
+  mixin(EntityThis!("BSIPersonEntity"));
   
   override void initialize() {
     super.initialize;
@@ -36,17 +36,15 @@ class DBSIPerson : DOOPEntity {
         "modifiedOnBehalfBy":`{"datatype":"UserId", "descriptions":{"en":"Unique identifier of the delegate user who last modified the annotation."}}`,
         "owningTeamId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the team who owns the note."}}`, */
       ])
-      .registerPath("bsi_person");
+      .registerPath("grundschutz_person");
   }
 }
-mixin(EntityCalls!("BSIPerson"));
+mixin(EntityCalls!("BSIPersonEntity"));
 
 version(test_library) {
   unittest {
-    assert(APLFeedback);
-    assert(BSIPerson);
+    assert(BSIPersonEntity);
   
-  auto entity = BSIPerson;
-
+  auto entity = BSIPersonEntity;
   }
 }
