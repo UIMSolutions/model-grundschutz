@@ -40,8 +40,7 @@ class DBSIDocumentLinkRootEntity : DOOPEntity {
 
   
 }
-auto BSIDocumentLinkRoot() { return new DBSIDocumentLinkRoot; } 
-auto BSIDocumentLinkRoot(Json json) { return new DBSIDocumentLinkRoot(json); } 
+mixin(EntityCalls!("BSIDocumentLinkRootEntity"));
 
 version(test_library) {
   unittest {
