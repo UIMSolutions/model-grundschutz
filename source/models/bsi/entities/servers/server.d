@@ -2,11 +2,6 @@ module models.bsi.entities.servers.server;
 
 @safe:
 import models.bsi;
-
-static this() {
-  createEntities[DBSIServer.namespace] = (Json json) => BSIServer(json); 
-  createEntities["bsiServer"] = (Json json) => BSIServer(json); 
-}
   
 class DBSIServer : DOOPEntity {
   mixin(EntityThis!("BSIServer"));
