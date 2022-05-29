@@ -1,10 +1,10 @@
-module models.bsi.users.role;
+module models.grundschutz.users.role;
 
 @safe:
-import models.bsi;
+import models.grundschutz;
 
-class DBSIRole : DOOPEntity {
-  mixin(EntityThis!("BSIRole"));
+class DBSIRoleEntity : DOOPEntity {
+  mixin(EntityThis!("BSIRoleEntity"));
   
   override void initialize() {
     super.initialize;
@@ -43,15 +43,8 @@ mixin(EntityCalls!("BSIRole"));
 
 version(test_library) {
   unittest {
-    assert(BSIRole);
+    assert(BSIRoleEntity);
   
-  auto entity = BSIRole;
-  // auto repository = OOPFileRepository("./tests");
-/*  repository.create("entities", entity.entityClasses, entity.toJson);
-
-  auto json = repository.findOne("entities", entity.entityClasses, ["id":entity.id.toString]);
-  assert(json != Json(null), entity.id.toString~" not found");
-
-  repository.cleanupConnections; */
+  auto entity = BSIRoleEntity;
   }
 }
