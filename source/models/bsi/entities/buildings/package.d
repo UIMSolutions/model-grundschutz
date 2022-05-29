@@ -1,4 +1,4 @@
-module models.bsi.entities.buildings;
+module models.grundschutz.entities.buildings;
 
-public import models.bsi.entities.buildings.building;
-public import models.bsi.entities.buildings.category;
+public import models.grundschutz.entities.buildings.building;
+public import models.grundschutz.entities.buildings.category;
