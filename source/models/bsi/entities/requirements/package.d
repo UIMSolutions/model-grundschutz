@@ -1,5 +1,5 @@
-module models.bsi.entities.requirements;
+module models.grundschutz.entities.requirements;
 
 // Main entity
-public import models.bsi.entities.requirements.requirement;
+public import models.grundschutz.entities.requirements.requirement;
 
