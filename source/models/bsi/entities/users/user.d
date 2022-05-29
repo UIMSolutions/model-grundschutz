@@ -1,10 +1,10 @@
-module models.bsi.users.user;
+module models.grundschutz.entities.users.user;
 
 @safe:
-import models.bsi;
+import models.grundschutz;
 
-class DBSIUser : DOOPEntity {
-  mixin(EntityThis!("BSIUser"));
+class DBSIUserEntity : DOOPEntity {
+  mixin(EntityThis!("BSIUserEntity"));
   
   override void initialize() {
     super.initialize;
@@ -36,22 +36,15 @@ class DBSIUser : DOOPEntity {
         "modifiedOnBehalfBy":`{"datatype":"UserId", "descriptions":{"en":"Unique identifier of the delegate user who last modified the annotation."}}`,
         "owningTeamId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the team who owns the note."}}`, */
       ])
-      .registerPath("bsi_users");
+      .registerPath("grundschutz_users");
   }
 }
-mixin(EntityCalls!("BSIUser"));
+mixin(EntityCalls!("BSIUserEntity"));
 
 version(test_library) {
   unittest {
-    assert(BSIUser);
+    assert(BSIUserEntity);
   
-  auto entity = BSIUser;
-  // auto repository = OOPFileRepository("./tests");
-/*  repository.create("entities", entity.entityClasses, entity.toJson);
-
-  auto json = repository.findOne("entities", entity.entityClasses, ["id":entity.id.toString]);
-  assert(json != Json(null), entity.id.toString~" not found");
-
-  repository.cleanupConnections; */
+  auto entity = BSIUserEntity;
   }
 }
