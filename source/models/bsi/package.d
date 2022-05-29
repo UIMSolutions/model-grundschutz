@@ -1,4 +1,4 @@
-module models.bsi;
+module models.grundschutz;
 
 @safe:
 public import std.stdio;
