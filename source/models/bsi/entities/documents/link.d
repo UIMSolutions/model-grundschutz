@@ -3,8 +3,8 @@ module models.grundschutz.documents.link;
 @safe:
 import models.grundachutz;
 
-class DBSIDocumentLink : DOOPEntity {
-  mixin(EntityThis!("BSIDocumentLink"));
+class DBSIDocumentLinkEntity : DOOPEntity {
+  mixin(EntityThis!("BSIDocumentLinkEntity"));
   
   override void initialize() {
     super.initialize;
@@ -39,7 +39,7 @@ class DBSIDocumentLink : DOOPEntity {
       .registerPath("bsi_documentlink");
   }
 }
-mixin(EntityCalls!("BSIDocumentLink"));
+mixin(EntityCalls!("BSIDocumentLinkEntity"));
 
 version(test_library) {
   unittest {
