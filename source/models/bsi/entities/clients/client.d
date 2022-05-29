@@ -1,10 +1,10 @@
-module models.bsi.clients.client;
+module models.grundschutz.clients.client;
 
 @safe:
-import models.bsi;
+import models.grundschutz;
 
-class DBSIClient : DOOPEntity {
-  mixin(EntityThis!("BSIClient"));
+class DBSIClientEntity : DOOPEntity {
+  mixin(EntityThis!("BSIClientEntity"));
   
   override void initialize() {
     super.initialize;
@@ -36,7 +36,7 @@ class DBSIClient : DOOPEntity {
 				"modifiedOnBehalfBy":`{"datatype":"UserId", "descriptions":{"en":"Unique identifier of the delegate user who last modified the annotation."}}`,
 				"owningTeamId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the team who owns the note."}}`, */
       ])
-      .registerPath("bsi_client");
+      .registerPath("bsi_clients");
   }
 }
 mixin(EntityCalls!("BSIClient"));
@@ -46,13 +46,6 @@ version(test_library) {
     assert(BSIClient);
   
   auto entity = BSIClient;
-  // auto repository = OOPFileRepository("./tests");
-/*  repository.create("entities", entity.entityClasses, entity.toJson);
-
-  auto json = repository.findOne("entities", entity.entityClasses, ["id":entity.id.toString]);
-  assert(json != Json(null), entity.id.toString~" not found");
-
-  repository.cleanupConnections; */
 	}
 }
 
