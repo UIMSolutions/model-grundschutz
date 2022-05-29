@@ -1,10 +1,10 @@
-module models.bsi.entities.clients.category;
+module models.grundschutz.entities.clients.category;
 
 @safe:
-import models.bsi;
+import models.grundschutz;
 
-class DBSIClientCategory : DOOPEntity {
-  mixin(EntityThis!("BSIClientCategory"));
+class DBSIClientCategoryEntity : DOOPEntity {
+  mixin(EntityThis!("BSIClientCategoryEntity"));
 
   override void initialize() {
     super.initialize;
@@ -43,15 +43,14 @@ auto BSIClientCategory(Json json) { return new DBSIClientCategory(json); }
 
 version(test_library) {
   unittest {
-    assert(BSIClientCategory);
+    assert(BSIClientCategoryEntity);
   
-  auto entity = BSIClientCategory;
+  auto entity = BSIClientCategoryEntity;
   }
 }
 
 /*
 import sernet.verinice.model.common.CnATreeElement;
-
 
 @SuppressWarnings("serial")
 public class AnwendungenKategorie extends CnATreeElement
