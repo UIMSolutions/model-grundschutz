@@ -1,10 +1,10 @@
-module models.bsi.entities.servers.category;
+module models.grundschutz.entities.servers.category;
 
 @safe:
-import models.bsi;
+import models.grundschutz;
 
-class DBSIServerCategory : DOOPEntity {
-  mixin(EntityThis!("BSIServerCategory"));
+class DBSIServerCategoryEntity : DOOPEntity {
+  mixin(EntityThis!("BSIServerCategoryEntity"));
   
   override void initialize() {
     super.initialize;
@@ -39,12 +39,11 @@ class DBSIServerCategory : DOOPEntity {
       .registerPath("bsi_servercategories");
   }
 }
-mixin(EntityCalls!("BSIServerCategory"));
+mixin(EntityCalls!("BSIServerCategoryEntity"));
 
 version(test_library) {
   unittest {
-    assert(APLFeedback);
-    assert(BSIServerCategory);
+    assert(BSIServerCategoryEntity);
   
   auto entity = BSIServerCategory;
   }
