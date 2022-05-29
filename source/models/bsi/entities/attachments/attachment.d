@@ -1,10 +1,10 @@
-module models.bsi.attachments.attachment;
+module models.grundschutz.attachments.attachment;
 
 @safe:
-import models.bsi;
+import models.grundschutz;
 
-class DBSIAttachment : DOOPEntity {
-  mixin(EntityThis!("BSIAttachment"));
+class DBSIAttachmentEntity : DOOPEntity {
+  mixin(EntityThis!("BSIAttachmentEntity"));
 
   override void initialize() {
     super.initialize;
@@ -38,36 +38,14 @@ class DBSIAttachment : DOOPEntity {
     ]);
   }
 
-  static string namespace = moduleName!DBSIAttachment;
-  override string entityPath() { return moduleName!DBSIAttachment; }
-  override string entityClass() { return "bsiAttachment"; }
-  override string entityClasses() { return "bsiAttachments"; }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
 }
-auto BSIAttachment() { return new DBSIAttachment; } 
-auto BSIAttachment(Json json) { return new DBSIAttachment(json); } 
+mixin(EntityCalls!("BSIAttachmentEntity"));
 
 version(test_library) {
   unittest {
-    assert(APLFeedback);
-    assert(BSIAttachment);
+    assert(BSIAttachmentEntity);
   
-  auto entity = BSIAttachment;
-  // auto repository = OOPFileRepository("./tests");
-/*  repository.create("entities", entity.entityClasses, entity.toJson);
-
-  auto json = repository.findOne("entities", entity.entityClasses, ["id":entity.id.toString]);
-  assert(json != Json(null), entity.id.toString~" not found");
-
-  repository.cleanupConnections; */
+  auto entity = BSIAttachmentEntity;
 	}
 }
 
