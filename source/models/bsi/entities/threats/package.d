@@ -1,5 +1,5 @@
-module models.bsi.entities.threats;
+module models.grundschutz.entities.threats;
 
-// Main module
-public import models.bsi.entities.threats.threat;
+// Main entity
+public import models.grundschutz.entities.threats.threat;
 
