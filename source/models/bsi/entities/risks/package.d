@@ -1,5 +1,5 @@
-module models.bsi.entities.risks;
+module models.grundschutz.entities.risks;
 
-// Main module
-public import models.bsi.entities.risks.risk;
+// Main entity
+public import models.grundschutz.entities.risks.risk;
 
