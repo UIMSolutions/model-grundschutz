@@ -1,9 +1,9 @@
-module models.bsi.entities.users;
+module models.grundschutz.entities.users;
 
 // Package
-public import models.bsi.entities.users.roles;
+public import models.grundschutz.entities.users.roles;
 
 // Main entity
-public import models.bsi.entities.users.user;
+public import models.grundschutz.entities.users.user;
 
 
