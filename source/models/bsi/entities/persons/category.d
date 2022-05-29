@@ -1,10 +1,10 @@
-module models.bsi.entities.persons.category;
+module models.grundschutz.entities.persons.category;
 
 @safe:
-import models.bsi;
+import models.grundschutz;
 
-class DBSIPersonCategory : DOOPEntity {
-  mixin(EntityThis!("BSIPersonCategory"));
+class DBSIPersonCategoryEntity : DOOPEntity {
+  mixin(EntityThis!("BSIPersonCategoryEntity"));
   
   override void initialize() {
     super.initialize;
@@ -37,15 +37,15 @@ class DBSIPersonCategory : DOOPEntity {
         "modifiedOnBehalfBy":`{"datatype":"UserId", "descriptions":{"en":"Unique identifier of the delegate user who last modified the annotation."}}`,
         "owningTeamId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the team who owns the note."}}`, */
       ])
-      .registerPath("bsi_personcategories");
+      .registerPath("grundschutz_personcategories");
   }
 }
-mixin(EntityCalls!("BSIPersonCategory"));
+mixin(EntityCalls!("BSIPersonCategoryEntity"));
 
 version(test_library) {
   unittest {
-    assert(BSIPersonCategory);
+    assert(BSIPersonCategoryEntity);
   
-  auto entity = BSIPersonCategory;
+  auto entity = BSIPersonCategoryEntity;
   }
 }
