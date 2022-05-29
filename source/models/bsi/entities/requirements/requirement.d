@@ -1,10 +1,10 @@
-module models.bsi.entities.requirements.requirement;
+module models.grundschutz.entities.requirements.requirement;
 
 @safe:
-import models.bsi;
+import models.grundschutz;
 
-class DBSIRequirement : DOOPEntity {
-  mixin(EntityThis!("BSIRequirement"));
+class DBSIRequirementEntity : DOOPEntity {
+  mixin(EntityThis!("BSIRequirementEntity"));
   
   override void initialize() {
     super.initialize;
@@ -39,12 +39,12 @@ class DBSIRequirement : DOOPEntity {
       .registerPath("bsi_requirements");
   }
 }
-mixin(EntityCalls!("BSIRequirement"));
+mixin(EntityCalls!("BSIRequirementEntity"));
 
 version(test_library) {
   unittest {
-    assert(BSIRequirement);
+    assert(BSIRequirementEntity);
   
-  auto entity = BSIRequirement;
+  auto entity = BSIRequirementEntity;
 	}
 }
