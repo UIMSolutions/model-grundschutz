@@ -1,9 +1,11 @@
-module models.bsi.entities.attachments.file;
+module models.grundschutz.entities.attachments.file;
 
 @safe:
-import models.bsi;
+import models.grundschutz;
 
-class DBSIAttachmentFile : DOOPEntity {
+class DBSIAttachmentFileEntity : DOOPEntity {
+  mixin(EntityThis!("BSIAttachmentFileEntity"))
+
   override void initialize() {
     super.initialize;
 
@@ -36,16 +38,13 @@ class DBSIAttachmentFile : DOOPEntity {
     ]);
   }
 }
-auto BSIAttachmentFile() { return new DBSIAttachmentFile; } 
-auto BSIAttachmentFile(Json json) { return new DBSIAttachmentFile(json); } 
+mixin(EntityCalls!("BSIAttachmentFileEntity"));
 
 version(test_library) {
   unittest {
- 
 
-    assert(BSIAttachmentFile);
-  
-  auto entity = BSIAttachmentFile;
+    assert(BSIAttachmentFileEntity);
+auto entity = BSIAttachmentFileEntity;
 
   }
 }
