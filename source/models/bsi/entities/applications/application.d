@@ -1,10 +1,10 @@
-module models.bsi.entities.applications.application;
+module models.grundschutz.entities.applications.application;
 
 @safe:
-import models.bsi;
+import models.grundschutz;
 
-class DBSIApplication : DOOPEntity {
-  mixin(EntityThis!("BSIApplication"));
+class DBSIApplicationEntity : DOOPEntity {
+  mixin(EntityThis!("BSIApplicationEntity"));
 
   override void initialize() {
     super.initialize;
@@ -46,7 +46,7 @@ class DBSIApplication : DOOPEntity {
     ]);
   }
 }
-mixin(EntityCalls!("BSIApplication"));
+mixin(EntityCalls!("BSIApplicationEntity"));
 
 version(test_library) {
   unittest {
