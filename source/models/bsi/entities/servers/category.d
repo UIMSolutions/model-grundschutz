@@ -1,13 +1,8 @@
-module models.bsi.servers.category;
+module models.bsi.entities.servers.category;
 
 @safe:
 import models.bsi;
 
-static this() {
-  createEntities[DBSIServerCategory.namespace] = (Json json) => BSIServerCategory(json); 
-  createEntities["bsiServerCategory"] = (Json json) => BSIServerCategory(json); 
-}
-// 
 class DBSIServerCategory : DOOPEntity {
   mixin(EntityThis!("BSIServerCategory"));
   
@@ -52,12 +47,5 @@ version(test_library) {
     assert(BSIServerCategory);
   
   auto entity = BSIServerCategory;
-  // auto repository = OOPFileRepository("./tests");
-/*  repository.create("entities", entity.entityClasses, entity.toJson);
-
-  auto json = repository.findOne("entities", entity.entityClasses, ["id":entity.id.toString]);
-  assert(json != Json(null), entity.id.toString~" not found");
-
-  repository.cleanupConnections; */
   }
 }
