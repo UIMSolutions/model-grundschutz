@@ -1,7 +1,7 @@
-module models.bsi.applications;
+module models.bsi.entities.applications;
 
-// Main module
-public import models.bsi.applications.application;
+// Main entity
+public import models.bsi.entities.applications.application;
 
 // Additional module
-public import models.bsi.applications.category;
+public import models.bsi.entities.applications.category;
