@@ -1,9 +1,9 @@
-module models.bsi.buildings.category;
+module models.grundschutz.buildings.category;
 
 @safe:
-import models.bsi;
+import models.grundschutz;
 
-class DBSIBuildingCategory : DOOPEntity {
+class DBSIBuildingCategoryEntity : DOOPEntity {
   override void initialize() {
     super.initialize;
 
@@ -35,34 +35,15 @@ class DBSIBuildingCategory : DOOPEntity {
       "owningTeamId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the team who owns the note."}}`, */
     ]);
   }
-
-  override string entityClass() { return "bsiBuildingCategory"; }
-  override string entityClasses() { return "bsiBuildingCategories"; }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
 }
 auto BSIBuildingCategory() { return new DBSIBuildingCategory; } 
 auto BSIBuildingCategory(Json json) { return new DBSIBuildingCategory(json); } 
 
 version(test_library) {
   unittest {
-    assert(BSIBuildingCategory);
+    assert(BSIBuildingCategoryEntity);
   
   auto entity = BSIBuildingCategory;
-  // auto repository = OOPFileRepository("./tests");
-/*  repository.create("entities", entity.entityClasses, entity.toJson);
-
-  auto json = repository.findOne("entities", entity.entityClasses, ["id":entity.id.toString]);
-  assert(json != Json(null), entity.id.toString~" not found");
-
-  repository.cleanupConnections; */
   }
 }
 
