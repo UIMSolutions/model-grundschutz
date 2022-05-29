@@ -1,9 +1,11 @@
-module models.bsi.applications.category;
+module models.bsi.entities.applications.category;
 
 @safe:
 import models.bsi;
 
 class DBSIApplicationCategory : DOOPEntity {
+  mixin(EntityThis!("BSIApplicationCategory"));
+
   override void initialize() {
     super.initialize;
 
@@ -35,18 +37,6 @@ class DBSIApplicationCategory : DOOPEntity {
       "owningTeamId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the team who owns the note."}}`, */
     ]);
   }
-
-  override string entityClass() { return "bsiApplicationCategory"; }
-  override string entityClasses() { return "bsiApplicationCategories"; }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
 }
 mixin(EntityCalls!("BSIApplicationCategory"));
 
@@ -56,8 +46,8 @@ version(test_library) {
   
   auto entity = BSIApplicationCategory;
 }}
-/*
 
+/*
 import sernet.verinice.model.common.CnATreeElement;
 
 @SuppressWarnings("serial")
