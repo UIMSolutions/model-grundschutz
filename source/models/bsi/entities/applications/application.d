@@ -11,8 +11,10 @@ class DBSIApplicationEntity : DOOPEntity {
 
     this
       .addValues([
-      "projectId": UUIDAttribute, //", "descriptions":{"en":"Unique identifier of the project with which this entity is associated."}}`,
-      "platformId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the platform with which this entity is associated."}}`,
+      GrundschutzProjectId, // Unique identifier of the project with which this entity is associated."}}`,
+}
+      .addValues([
+"platformId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the platform with which this entity is associated."}}`,
       "confidentialityCode":`{"datatype":"String", "descriptions":{"en":""}}`,
       "confidentialityReason":`{"datatype":"String", "descriptions":{"en":""}}`,
       "integrityCode":`{"datatype":"String", "descriptions":{"en":""}}`,
@@ -53,7 +55,6 @@ version(test_library) {
     assert(BSIApplication);
   
   auto entity = BSIApplication;
-
 	}
 }
 
@@ -143,11 +144,6 @@ public class Anwendung extends CnATreeElement
 		return SCHICHT;
 	}
 
-	@Override
-    public String getKuerzel() {
-		return getEntity().getSimpleValue(PROP_KUERZEL);
-	}
-
 	/**
 	 * Create new BSIElement.
 	 * 
@@ -161,40 +157,11 @@ public class Anwendung extends CnATreeElement
         setTitel(getTypeFactory().getMessage(TYPE_ID));
     }
 
-	protected Anwendung() {
-
-	}
-	
-	
-
-	@Override
-	public String getTitle() {
-		return getEntity().getProperties(PROP_NAME).getProperty(0)
-				.getPropertyValue();
-	}
-	
-	@Override
-    public void setTitel(String name) {
-		getEntity().setSimpleValue(getEntityType().getPropertyType(PROP_NAME), name);
-	}
-
-	
-
-	public void setErlaeuterung(String name) {
-		getEntity().setSimpleValue(getEntityType().getPropertyType(PROP_ERLAEUTERUNG), name);
-	}
-	
-	public void setKuerzel(String name) {
-		getEntity().setSimpleValue(getEntityType().getPropertyType(PROP_KUERZEL), name);
-	}
-	
 	public void setPersonenbezogen(boolean perso) {
 		PropertyType type = getEntityType().getPropertyType(PROP_PERSBEZ);
 		getEntity().setSimpleValue(type, perso ? PROP_PERSBEZ_JA : PROP_PERSBEZ_NEIN);
 	}
 	
-	
-
 	@Override
 	public String getTypeId() {
 		return TYPE_ID;
