@@ -1,10 +1,10 @@
-module models.bsi.entities.processes.category;
+module models.grundschutz.entities.processes.category;
 
 @safe:
-import models.bsi;
+import models.grundschutz;
 
-class DBSIProcessCategory : DOOPEntity {
-  mixin(EntityThis!("BSIProcessCategory"));
+class DBSIProcessCategoryEntity : DOOPEntity {
+  mixin(EntityThis!("BSIProcessCategoryEntity"));
   
   override void initialize() {
     super.initialize;
@@ -36,15 +36,15 @@ class DBSIProcessCategory : DOOPEntity {
         "modifiedOnBehalfBy":`{"datatype":"UserId", "descriptions":{"en":"Unique identifier of the delegate user who last modified the annotation."}}`,
         "owningTeamId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the team who owns the note."}}`, */
       ])
-      .registerPath("bsi_processcategories");
+      .registerPath("grundschutz_processcategories");
   }
 }
-mixin(EntityCalls!("BSIProcessCategory"));
+mixin(EntityCalls!("BSIProcessCategoryEntity"));
 
 version(test_library) {
   unittest {
-    assert(BSIProcessCategory);
+    assert(BSIProcessCategoryEntity);
   
-  auto entity = BSIProcessCategory;
+  auto entity = BSIProcessCategoryEntity;
   }
 }
