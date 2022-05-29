@@ -1,14 +1,9 @@
-module models.bsi.documents.linkroot;
+module models.grundschutz.documents.linkroot;
 
 @safe:
-import models.bsi;
+import models.grundschutz;
 
-static this() {
-  createEntities[DBSIDocumentLinkRoot.namespace] = (Json json) => BSIDocumentLinkRoot(json); 
-  createEntities["bsiDocumentLinkRoot"] = (Json json) => BSIDocumentLinkRoot(json); 
-}
-// 
-class DBSIDocumentLinkRoot : DOOPEntity {
+class DBSIDocumentLinkRootEntity : DOOPEntity {
   this() { super();
     this.addValues([
       "projectId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the project with which this entity is associated."}}`,
@@ -38,34 +33,16 @@ class DBSIDocumentLinkRoot : DOOPEntity {
     ]);
   }
 
-  override string entityClass() { return "bsiDocumentLinkRoot"; }
-  override string entityClasses() { return "bsiDocumentLinkRoots"; }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
+  
 }
 auto BSIDocumentLinkRoot() { return new DBSIDocumentLinkRoot; } 
 auto BSIDocumentLinkRoot(Json json) { return new DBSIDocumentLinkRoot(json); } 
 
 version(test_library) {
   unittest {
-    assert(APLFeedback);
-    assert(BSIDocumentLinkRoot);
+    assert(BSIDocumentLinkRootEntity);
   
-  auto entity = BSIDocumentLinkRoot;
-  // auto repository = OOPFileRepository("./tests");
-/*  repository.create("entities", entity.entityClasses, entity.toJson);
-
-  auto json = repository.findOne("entities", entity.entityClasses, ["id":entity.id.toString]);
-  assert(json != Json(null), entity.id.toString~" not found");
-
-  repository.cleanupConnections; */
+  auto entity = BSIDocumentLinkRootEntity;
   }
 }
 
