@@ -1,4 +1,4 @@
-module models.bsi.networks.category;
+module models.grunschutz.entities.networks.category;
 
 @safe:
 import models.bsi;
