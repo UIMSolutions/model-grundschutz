@@ -1,15 +1,11 @@
-module models.bsi.documents.reference;
+module models.grundschutz.documents.reference;
 
 @safe:
 import models.bsi;
 
-static this() {
-  createEntities[DBSIDocumentReference.namespace] = (Json json) => BSIDocumentReference(json); 
-  createEntities["bsiDocumentReference"] = (Json json) => BSIDocumentReference(json); 
-}
-// 
-class DBSIDocumentReference : DOOPEntity {
-  mixin(EntityThis!("BSIDocumentReference"));
+
+class DBSIDocumentReferenceEntity : DOOPEntity {
+  mixin(EntityThis!("BSIDocumentReferenceEntity"));
   
   override void initialize() {
     super.initialize;
@@ -48,17 +44,10 @@ mixin(EntityCalls!("BSIDocumentReference"));
 
 version(test_library) {
   unittest {
-    assert(APLFeedback);
-    assert(BSIDocumentReference);
+    assert(BSIDocumentReferenceEntity);
   
-  auto entity = BSIDocumentReference;
-  // auto repository = OOPFileRepository("./tests");
-/*  repository.create("entities", entity.entityClasses, entity.toJson);
-
-  auto json = repository.findOne("entities", entity.entityClasses, ["id":entity.id.toString]);
-  assert(json != Json(null), entity.id.toString~" not found");
-
-  repository.cleanupConnections; */
+  auto entity = BSIDocumentReferenceEntity;
+ 
   }
 }
 
