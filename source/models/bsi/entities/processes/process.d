@@ -1,10 +1,10 @@
-module models.bsi.entities.processes.process;
+module models.grundschutz.entities.processes.process;
 
 @safe:
-import models.bsi;
+import models.grundschutz;
 
-class DBSIProcess : DOOPEntity {
-  mixin(EntityThis!("BSIProcess"));
+class DBSIProcessEntity : DOOPEntity {
+  mixin(EntityThis!("BSIProcessEntity"));
   
   override void initialize() {
     super.initialize;
@@ -39,12 +39,12 @@ class DBSIProcess : DOOPEntity {
       .registerPath("bsi_processes");
   }
 }
-mixin(EntityCalls!("BSIProcess"));
+mixin(EntityCalls!("BSIProcessEntity"));
 
 version(test_library) {
   unittest {
-    assert(BSIProcess);
+    assert(BSIProcessEntity);
   
-  auto entity = BSIProcess;
+  auto entity = BSIProcessEntity;
 	}
 }
