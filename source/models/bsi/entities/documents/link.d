@@ -1,7 +1,7 @@
-module models.bsi.documents.link;
+module models.grundschutz.documents.link;
 
 @safe:
-import models.bsi;
+import models.grundachutz;
 
 class DBSIDocumentLink : DOOPEntity {
   mixin(EntityThis!("BSIDocumentLink"));
