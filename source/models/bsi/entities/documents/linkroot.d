@@ -11,10 +11,9 @@ class DBSIDocumentLinkRootEntity : DOOPEntity {
 
     this
       .addValues([
-            .addValues([
-        GrundschutzProjectId
+        GrundschutzProjectIdAttribute
       ])
-    ]);
+      .registerPath("grundschutz_documents.linkroots");
   }
 }
 mixin(EntityCalls!("BSIDocumentLinkRootEntity"));
@@ -23,7 +22,7 @@ version(test_library) {
   unittest {
     assert(BSIDocumentLinkRootEntity);
   
-  auto entity = BSIDocumentLinkRootEntity;
+    auto entity = BSIDocumentLinkRootEntity;
   }
 }
 

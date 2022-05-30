@@ -3,7 +3,7 @@ module models.grundschutz.entities.rooms.room;
 @safe:
 import models.grundschutz;
 
-class DBSIRoom : DOOPEntity {
+class DBSIRoomEntity : DOOPEntity {
   mixin(EntityThis!("BSIRoomEntity"));
   
   override void initialize() {
@@ -11,7 +11,7 @@ class DBSIRoom : DOOPEntity {
 
     this
       .addValues([
-        GrundschutzProjectId
+        GrundschutzProjectIdAttribute
       ])
       .addValues([
         "categoryId": UUIDAttribute, //
@@ -19,7 +19,7 @@ class DBSIRoom : DOOPEntity {
       .registerPath("grundschutz_rooms");
   }
 }
-mixin(EntityCalls!("BSIRoom"));
+mixin(EntityCalls!("BSIRoomEntity"));
 
 version(test_library) {
   unittest {

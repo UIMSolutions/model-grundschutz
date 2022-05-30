@@ -11,12 +11,12 @@ class DBSIRoleEntity : DOOPEntity {
 
     this
       .addValues([
-        GrundschutzProjectId
+        GrundschutzProjectIdAttribute
       ])
       .registerPath("grundschutz_roles");
   }
 }
-mixin(EntityCalls!("BSIRole"));
+mixin(EntityCalls!("BSIRoleEntity"));
 
 version(test_library) {
   unittest {

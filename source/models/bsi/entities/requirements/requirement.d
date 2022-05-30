@@ -11,7 +11,7 @@ class DBSIRequirementEntity : DOOPEntity {
 
     this
       .addValues([
-        GrundschutzProjectId
+        GrundschutzProjectIdAttribute
       ])
       .registerPath("grundschutz_requirements");
   }

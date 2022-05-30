@@ -11,7 +11,7 @@ class DBSIRiskEntity : DOOPEntity {
 
     this
       .addValues([
-        GrundschutzProjectId
+        GrundschutzProjectIdAttribute
       ])
       .registerPath("grundschutz_risks");
   }

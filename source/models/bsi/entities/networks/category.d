@@ -11,7 +11,7 @@ class DBSINetworkCategoryEntity : DOOPEntity {
 
     this
       .addValues([
-        GrundschutzProjectId
+        GrundschutzProjectIdAttribute
       ])
       .registerPath("grundschutz_networkcategory");
   }

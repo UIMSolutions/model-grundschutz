@@ -11,7 +11,7 @@ class DBSISystemEntity : DOOPEntity {
 
     this
       .addValues([
-        GrundschutzProjectId
+        GrundschutzProjectIdAttribute
       ])
 			.addValues([
 				"platformId": StringAttribute, // 

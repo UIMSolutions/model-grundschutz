@@ -4,28 +4,28 @@ module models.grundschutz.entities.buildings.building;
 import models.grundschutz;
 
 class DBSIBuildingEntity : DOOPEntity {
+  mixin(EntityThis!("BSIBuildingEntity"));
 
   override void initialize() {
     super.initialize;
 
     this
       .addValues([
-      "projectId": UUIDAttribute, 
+      	"projectId": UUIDAttribute, 
 			])
       .addValues([
-	      "categoryId":`{"datatype":"UUID", "descriptions":{"en":""}}`,
+	      "categoryId": UUIDAttribute, 
   	  ])
 			.registerPath("grundschutz_buildings");
   }
 }
-auto BSIBuilding() { return new DBSIBuilding; } 
-auto BSIBuilding(Json json) { return new DBSIBuilding(json); } 
+mixin(EntityCalls!("BSIBuildingEntity"));
 
 version(test_library) {
   unittest {
-    assert(BSIBuilding);
+    assert(BSIBuildingEntity);
   
-  auto entity = BSIBuilding;
+  	auto entity = BSIBuildingEntity;
 	}
 }
 

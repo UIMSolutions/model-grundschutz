@@ -11,9 +11,7 @@ class DBSIClientEntity : DOOPEntity {
 
     this
       .addValues([
-				      .addValues([
-        GrundschutzProjectId
-      ])
+        GrundschutzProjectIdAttribute, //
       ])
       .registerPath("grundschutz_clients");
   }

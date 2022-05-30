@@ -3,28 +3,25 @@ module models.grundschutz.entities.rooms.category;
 @safe:
 import models.grundschutz;
 
-class DBSIRoomCategory : DOOPEntity {
-  mixin(EntityThis!("BSIRoomCategory"));
+class DBSIRoomCategoryEntity : DOOPEntity {
+  mixin(EntityThis!("BSIRoomCategoryEntity"));
   
   override void initialize() {
     super.initialize;
 
     this
       .addValues([
-              .addValues([
-        GrundschutzProjectId
-      ])
-
+        GrundschutzProjectIdAttribute
       ])
       .registerPath("grundschutz_roomcategories");
   }
 }
-mixin(EntityCalls!("BSIRoomCategory"));
+mixin(EntityCalls!("BSIRoomCategoryEntity"));
 
 version(test_library) {
   unittest {
-    assert(BSIRoomCategory);
+    assert(BSIRoomCategoryEntity);
   
-  auto entity = BSIRoomCategory;
+  auto entity = BSIRoomCategoryEntity;
   }
 }

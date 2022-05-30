@@ -12,14 +12,12 @@ class DBSIDocumentReferenceEntity : DOOPEntity {
 
     this
       .addValues([
-              .addValues([
-        GrundschutzProjectId
-      ])
+        GrundschutzProjectIdAttribute
       ])
       .registerPath("grundschutz_documentreference");
   }
 }
-mixin(EntityCalls!("BSIDocumentReference"));
+mixin(EntityCalls!("BSIDocumentReferenceEntity"));
 
 version(test_library) {
   unittest {
@@ -54,7 +52,5 @@ public class DocumentReference implements Serializable {
 	public DocumentLink getParent() {
 		return parent;
 	}
-
 }
-
 */

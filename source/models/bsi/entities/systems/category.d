@@ -11,7 +11,7 @@ class DBSISystemCategoryEntity : DOOPEntity {
 
     this
       .addValues([
-        GrundschutzProjectId
+        GrundschutzProjectIdAttribute
       ])
       .registerPath("grundschutz_systemcategories");
   }

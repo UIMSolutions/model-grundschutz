@@ -3,30 +3,29 @@ module models.grundschutz.entities.networks.network;
 @safe:
 import models.grundschutz;
 
-class DBSINetwork : DOOPEntity {
-  mixin(EntityThis!("OPTRetailCDXDataStoreChannel"));
+class DBSINetworkEntity : DOOPEntity {
+  mixin(EntityThis!("BSINetworkEntity"));
   
   override void initialize() {
     super.initialize;
 
     this
       .addValues([
-        GrundschutzProjectId
+        GrundschutzProjectIdAttribute
       ])
       .addValues([
         "categoryId": UUIDAttribute,
       ]);
   }
 }
-mixin(EntityCalls!("OPTRetailCDXDataStoreChannel"));
+mixin(EntityCalls!("BSINetworkEntity"));
 
 
 version(test_library) {
   unittest {
-    assert(APLFeedback);
-    assert(BSINetwork);
+    assert(BSINetworkEntity);
   
-  auto entity = BSINetwork;
+  auto entity = BSINetworkEntity;
 
   }
 }

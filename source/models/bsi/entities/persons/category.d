@@ -11,7 +11,7 @@ class DBSIPersonCategoryEntity : DOOPEntity {
 
     this
       .addValues([
-        GrundschutzProjectId
+        GrundschutzProjectIdAttribute
       ])
       .addValues([
         "categoryId": UUIDAttribute,
