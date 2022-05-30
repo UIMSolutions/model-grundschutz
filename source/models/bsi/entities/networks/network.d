@@ -16,7 +16,8 @@ class DBSINetworkEntity : DOOPEntity {
       .addValues([
         "categoryId": UUIDAttribute,
 "tag": StringAttribute,
-
+"amount": IntegerAttribute,
+"NeedsSupplementaryAnalysis": Boolean Attribute
 "criticality": StringAttribute, // netzkomponente_kritikalitaet 0..5
       ]);
   }
