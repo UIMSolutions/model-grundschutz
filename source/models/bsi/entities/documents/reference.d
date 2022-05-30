@@ -37,7 +37,7 @@ class DBSIDocumentReferenceEntity : DOOPEntity {
         "modifiedOnBehalfBy":`{"datatype":"UserId", "descriptions":{"en":"Unique identifier of the delegate user who last modified the annotation."}}`,
         "owningTeamId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the team who owns the note."}}`, */
       ])
-      .registerPath("bsi_documentreference");
+      .registerPath("grundschutz_documentreference");
   }
 }
 mixin(EntityCalls!("BSIDocumentReference"));

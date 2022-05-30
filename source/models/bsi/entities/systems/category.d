@@ -36,7 +36,7 @@ class DBSISystemCategory : DOOPEntity {
         "modifiedOnBehalfBy":`{"datatype":"UserId", "descriptions":{"en":"Unique identifier of the delegate user who last modified the annotation."}}`,
         "owningTeamId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the team who owns the note."}}`, */
       ])
-      .registerPath("bsi_systemcategories");
+      .registerPath("grundschutz_systemcategories");
   }
 }
 mixin(EntityCalls!("BSISystemCategory"));

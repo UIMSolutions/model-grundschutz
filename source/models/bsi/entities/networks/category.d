@@ -36,7 +36,7 @@ class DBSINetworkCategoryEntity : DOOPEntity {
         "modifiedOnBehalfBy":`{"datatype":"UserId", "descriptions":{"en":"Unique identifier of the delegate user who last modified the annotation."}}`,
         "owningTeamId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the team who owns the note."}}`, */
       ])
-      .registerPath("bsi_networkcategory");
+      .registerPath("grundschutz_networkcategory");
   }
 }
 mixin(EntityCalls!("BSINetworkCategoryEntity"));
