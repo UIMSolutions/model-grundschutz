@@ -1,7 +1,7 @@
-module models.grundschutz.ics_systems;
+module models.grundschutz.entities.ics_systems;
 
 // Main entity
-public import models.grundschutz.ics_systems.ics_system;
+public import models.grundschutz.entities.ics_systems.ics_system;
 
 // Additional entities
-public import models.grundschutz.ics_systems.category;
+public import models.grundschutz.entities.ics_systems.category;

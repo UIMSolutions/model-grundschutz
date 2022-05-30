@@ -11,41 +11,20 @@ class DBSIApplicationEntity : DOOPEntity {
 
     this
       .addValues([
-      	GrundschutzProjectId, // Unique identifier of the project with which this entity is associated."}}`,
-			}
+      	GrundschutzProjectIdAttribute, // Unique identifier of the project with which this entity is associated.
+			])
       .addValues([
-			"platformId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the platform with which this entity is associated."}}`,
-      "confidentialityCode":`{"datatype":"String", "descriptions":{"en":""}}`,
-      "confidentialityReason":`{"datatype":"String", "descriptions":{"en":""}}`,
-      "integrityCode":`{"datatype":"String", "descriptions":{"en":""}}`,
-      "integrityReason":`{"datatype":"String", "descriptions":{"en":""}}`,
-      "availabilityCode":`{"datatype":"String", "descriptions":{"en":""}}`,
-      "availabilityReason":`{"datatype":"String", "descriptions":{"en":""}}`,
-
-/*       "annotationId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the note."}}`,
-      "objectTypeCode":`{"datatype":"Integer", "descriptions":{"en":"Type of entity with which the note is associated."}}`,
-      "objectTypeCode_display":`{"datatype":"String", "descriptions":{"en":""}}`,
-      "owningUserId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the user who owns the note."}}`,
-      "objectId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the object with which the note is associated."}}`,
-      "objectIdTypeCode":`{"datatype":"Integer", "descriptions":{"en":"The name of the entity linked by objectId"}}`,
-      "owningBusinessUnit":`{"datatype":"String", "descriptions":{"en":"Unique identifier of the business unit that owns the note."}}`,
-      "subject":`{"datatype":"String", "descriptions":{"en":"Subject associated with the note."}}`,
-      "isDocument":`{"datatype":"String", "descriptions":{"en":"Specifies whether the note is an attachment."}}`,
-      "noteText":`{"datatype":"String", "descriptions":{"en":"Text of the note."}}`,
-      "mimeType":`{"datatype":"String", "descriptions":{"en":"MIME type of the note's attachment."}}`,
-      "langId":`{"datatype":"UUID", "descriptions":{"en":"Language identifier for the note."}}`,
-      "documentBody":`{"datatype":"String", "descriptions":{"en":"Contents of the note's attachment."}}`,
-      "fileSize":`{"datatype":"String", "descriptions":{"en":"File size of the note."}}`,
-      "fileName":`{"datatype":"String", "descriptions":{"en":"File name of the note."}}`,
-      "ownerId":`{"datatype":"UUID", "descriptions":{"en":"Owner Id"}}`,
-      "ownerIdType":`{"datatype":"String", "descriptions":{"en":"The type of owner, either User or Team."}}`,
-      "stepId":`{"datatype":"UUID", "descriptions":{"en":"workflow step id associated with the note."}}`,
-      "overriddenCreatedOn":`{"datatype":"DateTime", "descriptions":{"en":"Date and time that the record was migrated."}}`,
-      "importSequenceNumber":`{"datatype":"String", "descriptions":{"en":"Unique identifier of the data import or data migration that created this record."}}`,
-      "createdOnBehalfBy":`{"datatype":"UserId", "descriptions":{"en":"Unique identifier of the delegate user who created the annotation."}}`,
-      "modifiedOnBehalfBy":`{"datatype":"UserId", "descriptions":{"en":"Unique identifier of the delegate user who last modified the annotation."}}`,
-      "owningTeamId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the team who owns the note."}}`, */
-    ]);
+				"platformId": StringAttribute, // Unique identifier of the platform with which this entity is associated."}}`,
+				"confidentialityCode": StringAttribute, // 
+				"confidentialityReason": StringAttribute, // 
+				"integrityCode": StringAttribute, // 
+				"integrityReason": StringAttribute, // 
+				"availabilityCode": StringAttribute, // 
+				"availabilityReason": StringAttribute, // 
+				"personalreference": StringAttribute, // 
+				"tag": StringAttribute, // 
+			])
+			.registerPath("grundschutz_applications");
   }
 }
 mixin(EntityCalls!("BSIApplicationEntity"));
@@ -54,7 +33,7 @@ version(test_library) {
   unittest {
     assert(BSIApplication);
   
-  auto entity = BSIApplication;
+  	auto entity = BSIApplication;
 	}
 }
 
@@ -83,37 +62,15 @@ public class Anwendung extends CnATreeElement
     
     private static final int SCHICHT = 5;
 
-	private final IReevaluator schutzbedarfProvider 
-		= new ProtectionRequirementsAdapter(this);
+	private final IReevaluator schutzbedarfProvider = new ProtectionRequirementsAdapter(this);
 	
-	private final ILinkChangeListener linkChangeListener
-		= new MaximumProtectionRequirementsListener(this);
-
-	// ID must correspond to entity definition in XML description
-	public static final String TYPE_ID = "anwendung"; //$NON-NLS-1$
-
-	public static final String PROP_NAME = "anwendung_name"; //$NON-NLS-1$
-
-	public static final String PROP_KUERZEL = "anwendung_kuerzel"; //$NON-NLS-1$
-
-	public static final String PROP_PERSBEZ 		= "anwendung_persbez"; //$NON-NLS-1$
-	public static final String PROP_PERSBEZ_JA 		= "anwendung_persbez_1"; //$NON-NLS-1$
-	public static final String PROP_PERSBEZ_NEIN 	= "anwendung_persbez_2"; //$NON-NLS-1$
-	@Deprecated
-	public static final String PROP_BENUTZER_OLD = "anwendung_benutzer"; //$NON-NLS-1$
-	@Deprecated
-	public static final String PROP_EIGENTUEMER_OLD = "anwendung_eigentümer"; //$NON-NLS-1$
-
-	public static final String PROP_TAG			= "anwendung_tag"; //$NON-NLS-1$
-
-	public static final String PROP_ERLAEUTERUNG = "anwendung_erlaeuterung"; //$NON-NLS-1$
+	private final ILinkChangeListener linkChangeListener = new MaximumProtectionRequirementsListener(this);
 
 	public static final String PROP_PROZESSBEZUG				= "anwendung_prozessbezug"; //$NON-NLS-1$
 	public static final String PROP_PROZESSBEZUG_UNTERSTUETZEND = "anwendung_prozessbezug_1"; //$NON-NLS-1$
 	public static final String PROP_PROZESSBEZUG_WICHTIG 		= "anwendung_prozessbezug_2"; //$NON-NLS-1$
 	public static final String PROP_PROZESSBEZUG_WESENTLICH 	= "anwendung_prozessbezug_3"; //$NON-NLS-1$
 	public static final String PROP_PROZESSBEZUG_HOCHGRADIG 	= "anwendung_prozessbezug_4"; //$NON-NLS-1$
-
 
 	private static final String PROP_VERARBEITETE_INFORMATIONEN = "anwendung_prozess_informationen"; //$NON-NLS-1$
 
