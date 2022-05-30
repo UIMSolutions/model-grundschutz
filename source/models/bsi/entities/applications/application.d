@@ -11,10 +11,10 @@ class DBSIApplicationEntity : DOOPEntity {
 
     this
       .addValues([
-      GrundschutzProjectId, // Unique identifier of the project with which this entity is associated."}}`,
-}
+      	GrundschutzProjectId, // Unique identifier of the project with which this entity is associated."}}`,
+			}
       .addValues([
-"platformId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the platform with which this entity is associated."}}`,
+			"platformId":`{"datatype":"UUID", "descriptions":{"en":"Unique identifier of the platform with which this entity is associated."}}`,
       "confidentialityCode":`{"datatype":"String", "descriptions":{"en":""}}`,
       "confidentialityReason":`{"datatype":"String", "descriptions":{"en":""}}`,
       "integrityCode":`{"datatype":"String", "descriptions":{"en":""}}`,

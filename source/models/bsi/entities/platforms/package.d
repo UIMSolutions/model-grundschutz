@@ -1,7 +1,7 @@
-module models.bsi.entities.platforms;
+module models.grundschutz.entities.platforms;
 
 // Main entity
-public import models.bsi.entities.platforms.platform;
+public import models.grundschutz.entities.platforms.platform;
 
 // Additional entities
-public import models.bsi.entities.platforms.category;
+public import models.grundschutz.entities.platforms.category;

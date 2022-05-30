@@ -1,7 +1,7 @@
-module models.bsi.entities.rooms.category;
+module models.grundschutz.entities.rooms.category;
 
 @safe:
-import models.bsi;
+import models.grundschutz;
 
 class DBSIRoomCategory : DOOPEntity {
   mixin(EntityThis!("BSIRoomCategory"));

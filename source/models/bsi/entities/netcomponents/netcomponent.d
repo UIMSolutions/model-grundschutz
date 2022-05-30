@@ -1,7 +1,7 @@
-module models.bsi.entities.netcomponents.netcomponent;
+module models.grundschutz.entities.netcomponents.netcomponent;
 
 @safe:
-import models.bsi;
+import models.grundschutz;
 
 class DBSINetComponent : DOOPEntity {
   mixin(EntityThis!("BSINetComponent"));

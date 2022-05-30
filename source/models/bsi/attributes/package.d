@@ -1,1 +1,1 @@
-module models.bsi.attributes;
+module models.grundschutz.attributes;

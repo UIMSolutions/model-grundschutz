@@ -1,7 +1,7 @@
-module models.bsi.entities.platforms.platform;
+module models.grundschutz.entities.platforms.platform;
 
 @safe:
-import models.bsi;
+import models.grundschutz;
 
 class DBSIPlatform : DOOPEntity {
   mixin(EntityThis!("BSIPlatform"));

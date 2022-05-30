@@ -1,4 +1,4 @@
-module models.bsi.entities.rooms;
+module models.grundschutz.entities.rooms;
 
-public import models.bsi.entities.rooms.room;
-public import models.bsi.entities.rooms.category;
+public import models.grundschutz.entities.rooms.room;
+public import models.grundschutz.entities.rooms.category;

@@ -1,7 +1,7 @@
-module models.bsi.entities.attachments;
+module models.grundschutz.entities.attachments;
 
 // Main entity
-public import models.bsi.entities.attachments.attachment;
+public import models.grundschutz.entities.attachments.attachment;
 
 // Additional entities
-public import models.bsi.entities.attachments.file;
+public import models.grundschutz.entities.attachments.file;

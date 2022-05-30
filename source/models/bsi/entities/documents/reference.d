@@ -1,7 +1,7 @@
 module models.grundschutz.documents.reference;
 
 @safe:
-import models.bsi;
+import models.grundschutz;
 
 
 class DBSIDocumentReferenceEntity : DOOPEntity {

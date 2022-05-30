@@ -1,6 +1,6 @@
-module models.bsi.entities.networks;
+module models.grundschutz.entities.networks;
 
-public import models.bsi.entities.networks.network;
+public import models.grundschutz.entities.networks.network;
 
-public import models.bsi.entities.networks.category;
+public import models.grundschutz.entities.networks.category;
 

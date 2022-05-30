@@ -1,4 +1,4 @@
-module models.bsi.entities.documents;
+module models.grundschutz.entities.documents;
 
 // Main entity
 public import models.grundschutz.entities.documents.document;

@@ -1,7 +1,7 @@
-module models.bsi.entities.systems;
+module models.grundschutz.entities.systems;
 
 // Main module
-public import models.bsi.entities.systems.system;
+public import models.grundschutz.entities.systems.system;
 
 // Additional module
-public import models.bsi.entities.systems.category;
+public import models.grundschutz.entities.systems.category;

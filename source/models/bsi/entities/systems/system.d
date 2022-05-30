@@ -1,7 +1,7 @@
-module models.bsi.systems.system;
+module models.grundschutz.systems.system;
 
 @safe:
-import models.bsi;
+import models.grundschutz;
 
 class DBSISystem : DOOPEntity {
   mixin(EntityThis!("BSISystem"));

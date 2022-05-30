@@ -1,7 +1,7 @@
-module models.bsi.entities.applications;
+module models.grundschutz.entities.applications;
 
 // Main entity
-public import models.bsi.entities.applications.application;
+public import models.grundschutz.entities.applications.application;
 
 // Additional module
-public import models.bsi.entities.applications.category;
+public import models.grundschutz.entities.applications.category;

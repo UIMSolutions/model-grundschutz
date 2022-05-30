@@ -1,7 +1,7 @@
-module models.bsi.documents.document;
+module models.grundschutz.documents.document;
 
 @safe:
-import models.bsi;
+import models.grundschutz;
 
 class DBSIDocument : DOOPEntity {
   mixin(EntityThis!("BSIDocument"));

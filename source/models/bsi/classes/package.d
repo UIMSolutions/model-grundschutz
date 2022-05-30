@@ -1,4 +1,4 @@
-module models.bsi.classes;
+module models.grundschutz.classes;
 
 @safe:
-import models.bsi;
+import models.grundschutz;

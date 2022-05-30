@@ -1,7 +1,7 @@
-module models.bsi.entities.clients;
+module models.grundschutz.entities.clients;
 
 // Main entity
-public import models.bsi.entities.clients.client;
+public import models.grundschutz.entities.clients.client;
 
 // Additional entities
-public import models.bsi.entities.clients.category;
+public import models.grundschutz.entities.clients.category;

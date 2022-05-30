@@ -1,8 +1,8 @@
-module models.bsi.entities;
+module models.grundschutz.entities;
 
 @safe:
-import models.bsi;
+import models.grundschutz;
 
-public import models.bsi.entities.applications;
-public import models.bsi.entities.systems;
-public import models.bsi.entities.users;
+public import models.grundschutz.entities.applications;
+public import models.grundschutz.entities.systems;
+public import models.grundschutz.entities.users;

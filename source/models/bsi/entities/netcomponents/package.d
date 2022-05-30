@@ -1,8 +1,8 @@
-module models.bsi.entities.netcomponents;
+module models.grundschutz.entities.netcomponents;
 
 // Main entity
-public import models.bsi.entities.netcomponents.netcomponent;
+public import models.grundschutz.entities.netcomponents.netcomponent;
 
 // Additional entities
-public import models.bsi.entities.netcomponents.category;
+public import models.grundschutz.entities.netcomponents.category;
 

@@ -1,7 +1,7 @@
-module models.bsi.entities.rooms.room;
+module models.grundschutz.entities.rooms.room;
 
 @safe:
-import models.bsi;
+import models.grundschutz;
 
 class DBSIRoom : DOOPEntity {
   mixin(EntityThis!("BSIRoom"));
