@@ -17,7 +17,7 @@ class DBSINetworkEntity : DOOPEntity {
         "categoryId": UUIDAttribute,
 "tag": StringAttribute,
 "amount": IntegerAttribute,
-"NeedsSupplementaryAnalysis": Boolean Attribute
+"needsSupplementaryAnalysis": BooleanAttribute
 "criticality": StringAttribute, // netzkomponente_kritikalitaet 0..5
       ]);
   }
@@ -30,12 +30,11 @@ version(test_library) {
     assert(BSINetworkEntity);
   
   auto entity = BSINetworkEntity;
-
   }
 }
 
 /* 
-import java.util.Collection;
+
 
 import sernet.hui.common.connect.Entity;
 import sernet.verinice.model.common.CnATreeElement;
@@ -43,8 +42,7 @@ import sernet.verinice.model.common.CnATreeElement;
 public class NetzKomponente extends CnATreeElement 
 	implements IBSIStrukturElement {
 	
-    private static final long serialVersionUID = 20160127143045L;
-	
+    private static final long serialVersionUID = 20160127143045L
 
     public static final String PROP_ESA_ENTSCHEIDUNG_DURCH = "nkkomponente_ergaenzendeanalyse_entscheidung_durch"; //$NON-NLS-1$
     public static final String PROP_ESA_ENTSCHEIDUNG_AM = "nkkomponente_ergaenzendeanalyse_entscheidung_am"; //$NON-NLS-1$
@@ -75,7 +73,6 @@ public class NetzKomponente extends CnATreeElement
 		return TagHelper.getTags(getEntity().getSimpleValue(PROP_TAG));
 	}
 	
-
 	@Override
 	public String getTypeId() {
 		return TYPE_ID;
@@ -85,21 +82,4 @@ public class NetzKomponente extends CnATreeElement
 	public boolean canContain(Object obj) {
 		return CnaStructureHelper.canContain(obj);
 	}
-	
-	public void setErlaeuterung(String name) {
-		getEntity().setSimpleValue(getEntityType().getPropertyType(PROP_ERLAEUTERUNG), name);
-	}
-	
-	public void setKuerzel(String name) {
-		getEntity().setSimpleValue(getEntityType().getPropertyType(PROP_KUERZEL), name);
-	}
-
-	public void setAnzahl(int anzahl) {
-		// do nothing
-	}
-
-
-
-}
-
 */
