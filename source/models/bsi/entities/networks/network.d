@@ -17,7 +17,8 @@ class DBSINetworkEntity : DOOPEntity {
         "categoryId": UUIDAttribute,
 "tag": StringAttribute,
 "amount": IntegerAttribute,
-"needsSupplementaryAnalysis": BooleanAttribute
+"needsSupplementaryAnalysis": BooleanAttribute,
+"supplementaryAnalysisUserId": BooleanAttribute
 "criticality": StringAttribute, // netzkomponente_kritikalitaet 0..5
       ]);
   }
