@@ -1,4 +1,4 @@
-module models.grundschutz.entities.ics_systems.ics_system;
+module models.grundschutz.entities.ics.ics_system;
 
 @safe:
 import models.grundschutz;
