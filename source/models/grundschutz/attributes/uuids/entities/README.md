@@ -1,1 +1,1 @@
-# Package 📦 models.grundschutz.attributes.uuids.entities
+# Package 📦 models.grundschutz.attributes.uuids
