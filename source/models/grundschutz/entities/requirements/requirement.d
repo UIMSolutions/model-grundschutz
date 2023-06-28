@@ -3,7 +3,7 @@ module models.grundschutz.entities.requirements.requirement;
 @safe:
 import models.grundschutz;
 
-class DBSIRequirementEntity : DOOPEntity {
+class DBSIRequirementEntity : DEntity {
   mixin(EntityThis!("BSIRequirementEntity"));
   
   override void initialize() {

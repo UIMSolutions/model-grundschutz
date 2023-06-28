@@ -3,7 +3,7 @@ module models.grundschutz.entities.processes.process;
 @safe:
 import models.grundschutz;
 
-class DBSIProcessEntity : DOOPEntity {
+class DBSIProcessEntity : DEntity {
   mixin(EntityThis!("BSIProcessEntity"));
   
   override void initialize() {

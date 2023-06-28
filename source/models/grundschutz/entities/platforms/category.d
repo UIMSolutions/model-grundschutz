@@ -3,7 +3,7 @@ module models.grundschutz.entities.platforms.category;
 @safe:
 import models.grundschutz;
 
-class DBSIPlatformCategoryEntity : DOOPEntity {
+class DBSIPlatformCategoryEntity : DEntity {
   mixin(EntityThis!("BSIPlatformCategoryEntity"));
   
   override void initialize() {

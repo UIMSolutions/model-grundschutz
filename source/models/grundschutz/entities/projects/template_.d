@@ -3,7 +3,7 @@ module models.grundschutz.entities.projects.template_;
 @safe:
 import models.grundschutz;
 
-class DBSIProjectTemplateEntity : DOOPEntity {
+class DBSIProjectTemplateEntity : DEntity {
   mixin(EntityThis!("BSIProjectTemplateEntity"));
   
   override void initialize() {

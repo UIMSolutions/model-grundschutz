@@ -3,7 +3,7 @@ module models.grundschutz.entities.risks.risk;
 @safe:
 import models.grundschutz;
 
-class DBSIRiskEntity : DOOPEntity {
+class DBSIRiskEntity : DEntity {
   mixin(EntityThis!("BSIRiskEntity"));
   
   override void initialize() {
