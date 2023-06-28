@@ -3,7 +3,7 @@ module models.grundschutz.entities.networks.category;
 @safe:
 import models.grundschutz;
 
-class DBSINetworkCategoryEntity : DOOPEntity {
+class DBSINetworkCategoryEntity : DEntity {
   mixin(EntityThis!("BSINetworkCategoryEntity"));
   
   override void initialize() {

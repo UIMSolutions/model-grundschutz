@@ -4,7 +4,7 @@ module models.grundschutz.entities.documents.reference;
 import models.grundschutz;
 
 
-class DBSIDocumentReferenceEntity : DOOPEntity {
+class DBSIDocumentReferenceEntity : DEntity {
   mixin(EntityThis!("BSIDocumentReferenceEntity"));
   
   override void initialize() {

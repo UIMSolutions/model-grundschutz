@@ -3,7 +3,7 @@ module models.grundschutz.entities.netcomponents.netcomponent;
 @safe:
 import models.grundschutz;
 
-class DBSINetComponent : DOOPEntity {
+class DBSINetComponent : DEntity {
   mixin(EntityThis!("BSINetComponent"));
   
   override void initialize() {

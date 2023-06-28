@@ -3,7 +3,7 @@ module models.grundschutz.entities.documents.linkroot;
 @safe:
 import models.grundschutz;
 
-class DBSIDocumentLinkRootEntity : DOOPEntity {
+class DBSIDocumentLinkRootEntity : DEntity {
   mixin(EntityThis!("BSIDocumentLinkRootEntity"));
   
   override void initialize() {

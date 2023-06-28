@@ -3,7 +3,7 @@ module models.grundschutz.entities.ics.category;
 @safe:
 import models.grundschutz;
 
-class DBSIICSSystemCategoryEntity : DOOPEntity {
+class DBSIICSSystemCategoryEntity : DEntity {
   mixin(EntityThis!("BSIICSSystemCategoryEntity"));
   
   override void initialize() {
