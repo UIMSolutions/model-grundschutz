@@ -3,7 +3,7 @@ module models.grundschutz.entities.documents.category;
 @safe:
 import models.grundschutz;
 
-class DBSIDocumentCategory : DOOPEntity {
+class DBSIDocumentCategory : DEntity {
   mixin(EntityThis!("BSIDocumentCategory"));
   
   override void initialize() {

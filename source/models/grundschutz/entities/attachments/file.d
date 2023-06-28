@@ -3,7 +3,7 @@ module models.grundschutz.entities.attachments.file;
 @safe:
 import models.grundschutz;
 
-class DBSIAttachmentFileEntity : DOOPEntity {
+class DBSIAttachmentFileEntity : DEntity {
   mixin(EntityThis!("BSIAttachmentFileEntity"));
 
   override void initialize() {

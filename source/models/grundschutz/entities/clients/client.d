@@ -3,7 +3,7 @@ module models.grundschutz.entities.clients.client;
 @safe:
 import models.grundschutz;
 
-class DBSIClientEntity : DOOPEntity {
+class DBSIClientEntity : DEntity {
   mixin(EntityThis!("BSIClientEntity"));
   
   override void initialize() {

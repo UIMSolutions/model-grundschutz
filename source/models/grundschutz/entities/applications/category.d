@@ -3,7 +3,7 @@ module models.grundschutz.entities.applications.category;
 @safe:
 import models.grundschutz;
 
-class DBSIApplicationCategoryEntity : DOOPEntity {
+class DBSIApplicationCategoryEntity : DEntity {
   mixin(EntityThis!("BSIApplicationCategoryEntity"));
 
   override void initialize() {

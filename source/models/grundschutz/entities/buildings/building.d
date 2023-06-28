@@ -3,7 +3,7 @@ module models.grundschutz.entities.buildings.building;
 @safe:
 import models.grundschutz;
 
-class DBSIBuildingEntity : DOOPEntity {
+class DBSIBuildingEntity : DEntity {
   mixin(EntityThis!("BSIBuildingEntity"));
 
   override void initialize() {
