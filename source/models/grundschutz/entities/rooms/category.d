@@ -3,7 +3,7 @@ module models.grundschutz.entities.rooms.category;
 @safe:
 import models.grundschutz;
 
-class DBSIRoomCategoryEntity : DOOPEntity {
+class DBSIRoomCategoryEntity : DEntity {
   mixin(EntityThis!("BSIRoomCategoryEntity"));
   
   override void initialize() {

@@ -3,7 +3,7 @@ module models.grundschutz.entities.persons.category;
 @safe:
 import models.grundschutz;
 
-class DBSIPersonCategoryEntity : DOOPEntity {
+class DBSIPersonCategoryEntity : DEntity {
   mixin(EntityThis!("BSIPersonCategoryEntity"));
   
   override void initialize() {

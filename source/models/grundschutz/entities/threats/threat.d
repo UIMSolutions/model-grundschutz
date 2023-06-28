@@ -3,7 +3,7 @@ module models.grundschutz.entities.threats.threat;
 @safe:
 import models.grundschutz;
 
-class DBSIThreatEntity : DOOPEntity {
+class DBSIThreatEntity : DEntity {
   mixin(EntityThis!("BSIThreatEntity"));
   
   override void initialize() {

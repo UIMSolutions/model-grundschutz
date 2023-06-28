@@ -3,7 +3,7 @@ module models.grundschutz.entities.users.role;
 @safe:
 import models.grundschutz;
 
-class DBSIRoleEntity : DOOPEntity {
+class DBSIRoleEntity : DEntity {
   mixin(EntityThis!("BSIRoleEntity"));
   
   override void initialize() {

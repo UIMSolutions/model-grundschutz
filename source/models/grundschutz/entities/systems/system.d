@@ -3,7 +3,7 @@ module models.grundschutz.entities.systems.system;
 @safe:
 import models.grundschutz;
 
-class DBSISystemEntity : DOOPEntity {
+class DBSISystemEntity : DEntity {
   mixin(EntityThis!("BSISystemEntity"));
   
   override void initialize() {

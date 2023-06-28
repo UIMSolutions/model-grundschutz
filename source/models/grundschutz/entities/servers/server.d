@@ -3,7 +3,7 @@ module models.grundschutz.entities.servers.server;
 @safe:
 import models.grundschutz;
   
-class DBSIServerEntity : DOOPEntity {
+class DBSIServerEntity : DEntity {
   mixin(EntityThis!("BSIServerEntity"));
   
   override void initialize() {
